@@ -9,6 +9,7 @@ import {
   fontSizeOptions,
   legendOptions,
   shiftKey,
+  themeColorMap,
   themeMap,
   themeOptions,
 } from '@/config'
@@ -249,7 +250,7 @@ export const useStore = defineStore(`store`, () => {
     let outputTemp = marked.parse(markdownContent) as string
 
     // 提取标题
-    const div = document.createElement('div')
+    const div = document.createElement(`div`)
     div.innerHTML = outputTemp
     const list = div.querySelectorAll<HTMLElement>(`[data-heading]`)
 
@@ -259,8 +260,8 @@ export const useStore = defineStore(`store`, () => {
       item.setAttribute(`id`, `${i}`)
       titleList.value.push({
         url: `#${i}`,
-        title: `${item.innerText}`,
-        level: Number(item.tagName.slice(1))
+        title: `${item.textContent}`,
+        level: Number(item.tagName.slice(1)),
       })
       i++
     }
@@ -425,14 +426,19 @@ export const useStore = defineStore(`store`, () => {
   }
 
   const themeChanged = withAfterRefresh((newTheme: keyof typeof themeMap) => {
+    // 同步更新主题色
+    const themeColor = themeColorMap[newTheme]
+
     renderer.setOptions({
       theme: customCssWithTemplate(
         css2json(getCurrentTab().content),
-        primaryColor.value,
+        themeColor,
         customizeTheme(themeMap[newTheme], { fontSize: fontSizeNumber.value }),
       ),
     })
+
     theme.value = newTheme
+    primaryColor.value = themeColor
   })
 
   const fontChanged = withAfterRefresh((fonts) => {

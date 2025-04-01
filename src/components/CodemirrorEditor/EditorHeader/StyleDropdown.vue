@@ -5,7 +5,6 @@ import {
   fontFamilyOptions,
   fontSizeOptions,
   legendOptions,
-  themeOptions,
 } from '@/config'
 import { useDisplayStore, useStore } from '@/stores'
 import PickColors, { type Format } from 'vue-pick-colors'
@@ -14,7 +13,6 @@ const store = useStore()
 const { toggleShowCssEditor } = useDisplayStore()
 
 const {
-  theme,
   fontFamily,
   fontSize,
   primaryColor,
@@ -26,7 +24,6 @@ const {
 
 const {
   resetStyleConfirm,
-  themeChanged,
   fontChanged,
   sizeChanged,
   colorChanged,
@@ -59,18 +56,12 @@ const formatOptions = ref<Format[]>([`rgb`, `hex`, `hsl`, `hsv`])
     <MenubarTrigger> 样式 </MenubarTrigger>
     <MenubarContent class="w-56" align="start">
       <StyleOptionMenu
-        title="主题"
-        :options="themeOptions"
-        :current="theme"
-        :change="themeChanged"
-      />
-      <MenubarSeparator />
-      <StyleOptionMenu
         title="字体"
         :options="fontFamilyOptions"
         :current="fontFamily"
         :change="fontChanged"
       />
+      <MenubarSeparator />
       <StyleOptionMenu
         title="字号"
         :options="fontSizeOptions"

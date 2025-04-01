@@ -10,6 +10,12 @@ import { useStore } from '@/stores'
 import { addPrefix, processClipboardContent } from '@/utils'
 import { ChevronDownIcon, Moon, PanelLeftClose, PanelLeftOpen, Settings, Sun } from 'lucide-vue-next'
 
+import EditDropdown from './EditDropdown.vue'
+import FileDropdown from './FileDropdown.vue'
+import HelpDropdown from './HelpDropdown.vue'
+import StyleDropdown from './StyleDropdown.vue'
+import ThemeDropdown from './ThemeDropdown.vue'
+
 const emit = defineEmits([`addFormat`, `formatContent`, `startCopy`, `endCopy`])
 
 const formatItems = [
@@ -135,6 +141,7 @@ function copy() {
           </MenubarContent>
         </MenubarMenu>
         <EditDropdown />
+        <ThemeDropdown />
         <StyleDropdown />
         <HelpDropdown />
       </Menubar>
@@ -160,7 +167,7 @@ function copy() {
         <Sun v-show="!isDark" class="size-4" />
       </Button>
 
-      <div class="space-x-1 bg-background text-background-foreground mx-2 flex items-center border rounded-md">
+      <div class="bg-background space-x-1 text-background-foreground mx-2 flex items-center border rounded-md">
         <Button variant="ghost" class="shadow-none" @click="copy">
           复制
         </Button>

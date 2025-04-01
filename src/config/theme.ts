@@ -881,6 +881,20 @@ export const themeMap = {
   phycatRed,
 }
 
+// 主题与主题色的映射关系
+export const themeColorMap = {
+  default: `#0F4C81`, // 经典蓝
+  grace: `#92617E`, // 薰衣紫
+  simple: `#333333`, // 石墨黑
+  phycatDark: `#546f99`, // 暗蓝色
+  phycatGreen: `#11aa63`, // 绿色
+  phycatMint: `#00b8a9`, // 薄荷色
+  phycatOrange: `#ff8c42`, // 橙色
+  phycatPlusblue: `#4285f4`, // 蓝色
+  phycatPurple: `#8e44ad`, // 紫色
+  phycatRed: `#e74c3c`, // 红色
+}
+
 export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
   {
     label: `经典`,
