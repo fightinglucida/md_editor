@@ -573,10 +573,312 @@ const simpleTheme = toMerged(defaultTheme, {
   },
 })
 
+// 添加7个新主题
+const phycatDark = toMerged(defaultTheme, {
+  base: {
+    '--md-primary-color': `#546f99`,
+    'text-align': `left`,
+    'line-height': `1.75`,
+    'background-color': `#222222`,
+    'color': `#c5c5c5`,
+  },
+  block: {
+    h1: {
+      'display': `table`,
+      'padding': `0 1em`,
+      'border-bottom': `2px solid var(--md-primary-color)`,
+      'margin': `2em auto 1em`,
+      'color': `#5c7aaa`,
+      'font-size': `1.2em`,
+      'font-weight': `bold`,
+      'text-align': `center`,
+    },
+    h2: {
+      'display': `table`,
+      'padding': `0 0.2em`,
+      'margin': `4em auto 2em`,
+      'color': `#fff`,
+      'background': `#6785b4`,
+      'font-size': `1.2em`,
+      'font-weight': `bold`,
+      'text-align': `center`,
+    },
+    h3: {
+      'padding-left': `8px`,
+      'border-left': `3px solid var(--md-primary-color)`,
+      'margin': `2em 8px 0.75em 0`,
+      'color': `#c5c5c5`,
+      'font-size': `1.1em`,
+      'font-weight': `bold`,
+      'line-height': `1.2`,
+    },
+    h4: {
+      'margin': `2em 8px 0.5em`,
+      'color': `var(--md-primary-color)`,
+      'font-size': `1em`,
+      'font-weight': `bold`,
+    },
+    p: {
+      'margin': `1.5em 8px`,
+      'letter-spacing': `0.1em`,
+      'color': `#c5c5c5`,
+    },
+    blockquote: {
+      'font-style': `normal`,
+      'padding': `1em`,
+      'border-left': `4px solid var(--md-primary-color)`,
+      'border-radius': `6px`,
+      'color': `rgba(197, 197, 197, 0.8)`,
+      'background': `#25272E`,
+    },
+    code_pre: {
+      'font-size': `14px`,
+      'overflow-x': `auto`,
+      'border-radius': `8px`,
+      'padding': `1em`,
+      'line-height': `1.5`,
+      'margin': `10px 8px`,
+      'background': `#25272E`,
+    },
+    code: {
+      'white-space': `pre-wrap`,
+      'font-family': `Menlo, Operator Mono, Consolas, Monaco, monospace`,
+    },
+    image: {
+      'border-radius': `8px`,
+      'border': `1px solid rgba(0, 0, 0, 0.04)`,
+    },
+  },
+  inline: {
+    codespan: {
+      'font-size': `90%`,
+      'color': `#c5c5c5`,
+      'background': `#708ab3`,
+      'padding': `3px 5px`,
+      'border-radius': `4px`,
+    },
+    strong: {
+      'color': `var(--md-primary-color)`,
+      'font-weight': `bold`,
+    },
+  },
+})
+
+const phycatGreen = toMerged(defaultTheme, {
+  base: {
+    '--md-primary-color': `#11aa63`,
+  },
+  block: {
+    h1: {
+      color: `#11aa63`,
+    },
+    h2: {
+      color: `#000`,
+      background: `linear-gradient(to right, #43bd84, #68eaad)`,
+    },
+    h3: {
+      'border-left': `3px solid #11aa63`,
+    },
+    h4: {
+      color: `#11aa63`,
+    },
+    blockquote: {
+      'border-left': `4px solid #11aa63`,
+      'background': `#6cb19125`,
+    },
+  },
+  inline: {
+    codespan: {
+      color: `#009a52`,
+      background: `#6cb19125`,
+    },
+    strong: {
+      color: `#11aa63`,
+    },
+  },
+})
+
+const phycatMint = toMerged(defaultTheme, {
+  base: {
+    '--md-primary-color': `#00b8a9`,
+  },
+  block: {
+    h1: {
+      color: `#00b8a9`,
+    },
+    h2: {
+      color: `#000`,
+      background: `linear-gradient(to right, #00b8a9, #7fd1c7)`,
+    },
+    h3: {
+      'border-left': `3px solid #00b8a9`,
+    },
+    h4: {
+      color: `#00b8a9`,
+    },
+    blockquote: {
+      'border-left': `4px solid #00b8a9`,
+      'background': `#e1f5f3`,
+    },
+  },
+  inline: {
+    codespan: {
+      color: `#00a598`,
+      background: `#e1f5f3`,
+    },
+    strong: {
+      color: `#00b8a9`,
+    },
+  },
+})
+
+const phycatOrange = toMerged(defaultTheme, {
+  base: {
+    '--md-primary-color': `#ff8c42`,
+  },
+  block: {
+    h1: {
+      color: `#ff8c42`,
+    },
+    h2: {
+      color: `#000`,
+      background: `linear-gradient(to right, #ff8c42, #ffb88c)`,
+    },
+    h3: {
+      'border-left': `3px solid #ff8c42`,
+    },
+    h4: {
+      color: `#ff8c42`,
+    },
+    blockquote: {
+      'border-left': `4px solid #ff8c42`,
+      'background': `#fff2e9`,
+    },
+  },
+  inline: {
+    codespan: {
+      color: `#e67e3b`,
+      background: `#fff2e9`,
+    },
+    strong: {
+      color: `#ff8c42`,
+    },
+  },
+})
+
+const phycatPlusblue = toMerged(defaultTheme, {
+  base: {
+    '--md-primary-color': `#4285f4`,
+  },
+  block: {
+    h1: {
+      color: `#4285f4`,
+    },
+    h2: {
+      color: `#000`,
+      background: `linear-gradient(to right, #4285f4, #8ab4f8)`,
+    },
+    h3: {
+      'border-left': `3px solid #4285f4`,
+    },
+    h4: {
+      color: `#4285f4`,
+    },
+    blockquote: {
+      'border-left': `4px solid #4285f4`,
+      'background': `#e8f0fe`,
+    },
+  },
+  inline: {
+    codespan: {
+      color: `#3b78e7`,
+      background: `#e8f0fe`,
+    },
+    strong: {
+      color: `#4285f4`,
+    },
+  },
+})
+
+const phycatPurple = toMerged(defaultTheme, {
+  base: {
+    '--md-primary-color': `#8e44ad`,
+  },
+  block: {
+    h1: {
+      color: `#8e44ad`,
+    },
+    h2: {
+      color: `#000`,
+      background: `linear-gradient(to right, #8e44ad, #bf7fd4)`,
+    },
+    h3: {
+      'border-left': `3px solid #8e44ad`,
+    },
+    h4: {
+      color: `#8e44ad`,
+    },
+    blockquote: {
+      'border-left': `4px solid #8e44ad`,
+      'background': `#f4e9f9`,
+    },
+  },
+  inline: {
+    codespan: {
+      color: `#7d3c99`,
+      background: `#f4e9f9`,
+    },
+    strong: {
+      color: `#8e44ad`,
+    },
+  },
+})
+
+const phycatRed = toMerged(defaultTheme, {
+  base: {
+    '--md-primary-color': `#e74c3c`,
+  },
+  block: {
+    h1: {
+      color: `#e74c3c`,
+    },
+    h2: {
+      color: `#000`,
+      background: `linear-gradient(to right, #e74c3c, #f5978e)`,
+    },
+    h3: {
+      'border-left': `3px solid #e74c3c`,
+    },
+    h4: {
+      color: `#e74c3c`,
+    },
+    blockquote: {
+      'border-left': `4px solid #e74c3c`,
+      'background': `#fdedeb`,
+    },
+  },
+  inline: {
+    codespan: {
+      color: `#d04437`,
+      background: `#fdedeb`,
+    },
+    strong: {
+      color: `#e74c3c`,
+    },
+  },
+})
+
 export const themeMap = {
   default: defaultTheme,
   grace: graceTheme,
   simple: simpleTheme,
+  phycatDark,
+  phycatGreen,
+  phycatMint,
+  phycatOrange,
+  phycatPlusblue,
+  phycatPurple,
+  phycatRed,
 }
 
 export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
@@ -594,5 +896,40 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
     label: `简洁`,
     value: `simple`,
     desc: `@okooo5km`,
+  },
+  {
+    label: `暗黑`,
+    value: `phycatDark`,
+    desc: `@phycat`,
+  },
+  {
+    label: `绿色`,
+    value: `phycatGreen`,
+    desc: `@phycat`,
+  },
+  {
+    label: `薄荷`,
+    value: `phycatMint`,
+    desc: `@phycat`,
+  },
+  {
+    label: `橙色`,
+    value: `phycatOrange`,
+    desc: `@phycat`,
+  },
+  {
+    label: `蓝色`,
+    value: `phycatPlusblue`,
+    desc: `@phycat`,
+  },
+  {
+    label: `紫色`,
+    value: `phycatPurple`,
+    desc: `@phycat`,
+  },
+  {
+    label: `红色`,
+    value: `phycatRed`,
+    desc: `@phycat`,
   },
 ]
