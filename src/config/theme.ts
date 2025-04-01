@@ -2,6 +2,7 @@ import type { IConfigOption, Theme } from '@/types'
 
 import { toMerged } from 'es-toolkit'
 
+// 默认主题
 const defaultTheme: Theme = {
   base: {
     '--md-primary-color': `#000000`,
@@ -17,7 +18,7 @@ const defaultTheme: Theme = {
       'border-bottom': `2px solid var(--md-primary-color)`,
       'margin': `2em auto 1em`,
       'color': `hsl(var(--foreground))`,
-      'font-size': `1.2em`,
+      'font-size': `1.6em`,
       'font-weight': `bold`,
       'text-align': `center`,
     },
@@ -25,7 +26,7 @@ const defaultTheme: Theme = {
     // 二级标题
     h2: {
       'display': `table`,
-      'padding': `0 0.2em`,
+      'padding': `0.2em 1em`,
       'margin': `4em auto 2em`,
       'color': `#fff`,
       'background': `var(--md-primary-color)`,
@@ -286,6 +287,7 @@ const defaultTheme: Theme = {
   },
 }
 
+// 优雅主题
 const graceTheme = toMerged(defaultTheme, {
   base: {
   },
@@ -430,6 +432,7 @@ const graceTheme = toMerged(defaultTheme, {
   },
 })
 
+// 简洁主题
 const simpleTheme = toMerged(defaultTheme, {
   base: {
   },
@@ -574,55 +577,74 @@ const simpleTheme = toMerged(defaultTheme, {
 })
 
 // 添加7个新主题
+// ===== 主题定义开始 =====
+// 创建新主题的步骤：
+// 1. 使用toMerged函数基于defaultTheme创建新主题
+// 2. 设置主题的基本样式（base部分）
+// 3. 设置块级元素样式（block部分）
+// 4. 设置内联元素样式（inline部分）
+// 5. 在themeMap中注册新主题
+// 6. 在themeColorMap中添加主题色
+// 7. 在themeOptions中添加主题选项
+
+// 暗黑主题示例
 const phycatDark = toMerged(defaultTheme, {
   base: {
+    // 主题的主色调，用于标题、边框等元素
     '--md-primary-color': `#546f99`,
+    // 文本对齐方式
     'text-align': `left`,
+    // 行高
     'line-height': `1.75`,
+    // 背景色（暗色主题特有）
     'background-color': `#222222`,
+    // 文本颜色（暗色主题特有）
     'color': `#c5c5c5`,
   },
   block: {
+    // 一级标题样式
     h1: {
       'display': `table`,
       'padding': `0 1em`,
       'border-bottom': `2px solid var(--md-primary-color)`,
       'margin': `2em auto 1em`,
-      'color': `#5c7aaa`,
-      'font-size': `1.2em`,
+      'color': `#5c7aaa`, // 标题颜色
+      'font-size': `1.6em`,
       'font-weight': `bold`,
       'text-align': `center`,
     },
+    // 二级标题样式
     h2: {
-      'display': `table`,
-      'padding': `0 0.2em`,
-      'margin': `4em auto 2em`,
-      'color': `#fff`,
-      'background': `#6785b4`,
-      'font-size': `1.2em`,
-      'font-weight': `bold`,
-      'text-align': `center`,
+      display: `table`,
+      padding: `0.2em 1em`,
+      margin: `4em auto 2em`,
+      color: `#fff`,
+      background: `#6785b4`, // 背景色，可以是纯色或渐变
     },
+    // 三级标题样式
     h3: {
       'padding-left': `8px`,
       'border-left': `3px solid var(--md-primary-color)`,
       'margin': `2em 8px 0.75em 0`,
-      'color': `#c5c5c5`,
+      'color': `#ffffff`,
       'font-size': `1.1em`,
       'font-weight': `bold`,
       'line-height': `1.2`,
     },
+    // 四级标题样式
     h4: {
       'margin': `2em 8px 0.5em`,
       'color': `var(--md-primary-color)`,
       'font-size': `1em`,
       'font-weight': `bold`,
     },
+    // 段落样式
     p: {
       'margin': `1.5em 8px`,
       'letter-spacing': `0.1em`,
-      'color': `#c5c5c5`,
+      'color': `#ffffff`,
     },
+    // 引用样式
     blockquote: {
       'font-style': `normal`,
       'padding': `1em`,
@@ -631,6 +653,7 @@ const phycatDark = toMerged(defaultTheme, {
       'color': `rgba(197, 197, 197, 0.8)`,
       'background': `#25272E`,
     },
+    // 代码块样式
     code_pre: {
       'font-size': `14px`,
       'overflow-x': `auto`,
@@ -640,23 +663,42 @@ const phycatDark = toMerged(defaultTheme, {
       'margin': `10px 8px`,
       'background': `#25272E`,
     },
+    // 行内代码样式
     code: {
       'white-space': `pre-wrap`,
       'font-family': `Menlo, Operator Mono, Consolas, Monaco, monospace`,
     },
+    // 图片样式
     image: {
       'border-radius': `8px`,
       'border': `1px solid rgba(0, 0, 0, 0.04)`,
     },
+    // 有序列表
+    ol: {
+      'padding-left': `1em`,
+      'margin-left': `0`,
+      'color': `#ffffff`,
+    },
+
+    // 无序列表
+    ul: {
+      'list-style': `circle`,
+      'padding-left': `1em`,
+      'margin-left': `0`,
+      'color': `#ffffff`,
+    },
   },
+
   inline: {
+    // 代码段样式
     codespan: {
       'font-size': `90%`,
-      'color': `#c5c5c5`,
+      'color': `#e6dada`,
       'background': `#708ab3`,
       'padding': `3px 5px`,
       'border-radius': `4px`,
     },
+    // 加粗样式
     strong: {
       'color': `var(--md-primary-color)`,
       'font-weight': `bold`,
@@ -664,17 +706,23 @@ const phycatDark = toMerged(defaultTheme, {
   },
 })
 
+// 绿色主题示例
 const phycatGreen = toMerged(defaultTheme, {
   base: {
+    // 主题的主色调
     '--md-primary-color': `#11aa63`,
   },
   block: {
+    // 只需要覆盖想要修改的样式，其他样式会继承自defaultTheme
     h1: {
       color: `#11aa63`,
     },
     h2: {
-      color: `#000`,
-      background: `linear-gradient(to right, #43bd84, #68eaad)`,
+      'color': `#000`,
+      'background': `linear-gradient(to right, #00F260, #0575E6)`, // 渐变背景
+      'border-radius': `8px 8px 8px 8px`,
+      'box-shadow': `0 2px 6px rgba(0,0,0,0.06)`,
+
     },
     h3: {
       'border-left': `3px solid #11aa63`,
@@ -698,40 +746,44 @@ const phycatGreen = toMerged(defaultTheme, {
   },
 })
 
+// 薄荷主题示例
 const phycatMint = toMerged(defaultTheme, {
   base: {
-    '--md-primary-color': `#00b8a9`,
+    '--md-primary-color': `#1FA2FF`,
   },
   block: {
     h1: {
-      color: `#00b8a9`,
+      color: `#1FA2FF`,
     },
     h2: {
-      color: `#000`,
-      background: `linear-gradient(to right, #00b8a9, #7fd1c7)`,
+      'color': `#000`,
+      'background': `linear-gradient(to right,#1FA2FF, #12D8FA)`,
+      'border-radius': `8px 8px 8px 8px`,
+      'box-shadow': `0 2px 6px rgba(0,0,0,0.06)`,
     },
     h3: {
-      'border-left': `3px solid #00b8a9`,
+      'border-left': `3px solid #1FA2FF`,
     },
     h4: {
-      color: `#00b8a9`,
+      color: `#1FA2FF`,
     },
     blockquote: {
-      'border-left': `4px solid #00b8a9`,
+      'border-left': `4px solid #1FA2FF`,
       'background': `#e1f5f3`,
     },
   },
   inline: {
     codespan: {
-      color: `#00a598`,
+      color: `#1FA2FF`,
       background: `#e1f5f3`,
     },
     strong: {
-      color: `#00b8a9`,
+      color: `#1FA2FF`,
     },
   },
 })
 
+// 橙色主题示例
 const phycatOrange = toMerged(defaultTheme, {
   base: {
     '--md-primary-color': `#ff8c42`,
@@ -741,8 +793,10 @@ const phycatOrange = toMerged(defaultTheme, {
       color: `#ff8c42`,
     },
     h2: {
-      color: `#000`,
-      background: `linear-gradient(to right, #ff8c42, #ffb88c)`,
+      'color': `#000`,
+      'background': `linear-gradient(to right, #fc4a1a, #f7b733)`,
+      'border-radius': `8px 8px 8px 8px`,
+      'box-shadow': `0 2px 6px rgba(0,0,0,0.06)`,
     },
     h3: {
       'border-left': `3px solid #ff8c42`,
@@ -766,6 +820,7 @@ const phycatOrange = toMerged(defaultTheme, {
   },
 })
 
+// 蓝色主题示例
 const phycatPlusblue = toMerged(defaultTheme, {
   base: {
     '--md-primary-color': `#4285f4`,
@@ -776,7 +831,7 @@ const phycatPlusblue = toMerged(defaultTheme, {
     },
     h2: {
       color: `#000`,
-      background: `linear-gradient(to right, #4285f4, #8ab4f8)`,
+      background: `linear-gradient(to right, #4285f4, #b3cbf3)`,
     },
     h3: {
       'border-left': `3px solid #4285f4`,
@@ -800,6 +855,7 @@ const phycatPlusblue = toMerged(defaultTheme, {
   },
 })
 
+// 紫色主题示例
 const phycatPurple = toMerged(defaultTheme, {
   base: {
     '--md-primary-color': `#8e44ad`,
@@ -809,8 +865,10 @@ const phycatPurple = toMerged(defaultTheme, {
       color: `#8e44ad`,
     },
     h2: {
-      color: `#000`,
-      background: `linear-gradient(to right, #8e44ad, #bf7fd4)`,
+      'color': `#EEEEEE`,
+      'background': `linear-gradient(to right, #ad5389, #3c1053)`,
+      'border-radius': `8px 8px 8px 8px`,
+      'box-shadow': `0 2px 6px rgba(0,0,0,0.06)`,
     },
     h3: {
       'border-left': `3px solid #8e44ad`,
@@ -834,6 +892,7 @@ const phycatPurple = toMerged(defaultTheme, {
   },
 })
 
+// 红色主题示例
 const phycatRed = toMerged(defaultTheme, {
   base: {
     '--md-primary-color': `#e74c3c`,
@@ -843,8 +902,10 @@ const phycatRed = toMerged(defaultTheme, {
       color: `#e74c3c`,
     },
     h2: {
-      color: `#000`,
-      background: `linear-gradient(to right, #e74c3c, #f5978e)`,
+      'color': `#ffffff`,
+      'background': `linear-gradient(to right, #FF416C, #FF4B2B)`,
+      'border-radius': `8px 8px 8px 8px`,
+      'box-shadow': `0 2px 6px rgba(0,0,0,0.06)`,
     },
     h3: {
       'border-left': `3px solid #e74c3c`,
@@ -868,6 +929,84 @@ const phycatRed = toMerged(defaultTheme, {
   },
 })
 
+// 主题与主题色的映射关系
+// 添加新主题时，在这里添加对应的主题色
+export const themeColorMap = {
+  default: `#0F4C81`, // 经典蓝
+  grace: `#92617E`, // 薰衣紫
+  simple: `#333333`, // 石墨黑
+  phycatDark: `#546f99`, // 暗蓝色
+  phycatGreen: `#11aa63`, // 绿色
+  phycatMint: `#1FA2FF`, // 薄荷色
+  phycatOrange: `#ff8c42`, // 橙色
+  phycatPlusblue: `#4285f4`, // 蓝色
+  phycatPurple: `#8e44ad`, // 紫色
+  phycatRed: `#e74c3c`, // 红色
+  // 在这里添加新主题的主题色
+  // 格式: 主题名: `颜色代码`, // 颜色描述
+}
+
+// 主题选项
+export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
+  {
+    label: `蓝色经典`, // 显示在菜单中的名称
+    value: `default`, // 对应themeMap中的键名
+    desc: ``, // 描述信息
+  },
+  {
+    label: `深沉优雅`,
+    value: `grace`,
+    desc: `@brzhang`,
+  },
+  {
+    label: `黑白极简`,
+    value: `simple`,
+    desc: `@okooo5km`,
+  },
+  {
+    label: `暗黑江湖`,
+    value: `phycatDark`,
+    desc: `@phycat`,
+  },
+  {
+    label: `绿色炫丽`,
+    value: `phycatGreen`,
+    desc: `@phycat`,
+  },
+  {
+    label: `薄荷口味`,
+    value: `phycatMint`,
+    desc: `@phycat`,
+  },
+  {
+    label: `艳阳高照`,
+    value: `phycatOrange`,
+    desc: `@phycat`,
+  },
+  {
+    label: `蓝色清新`,
+    value: `phycatPlusblue`,
+    desc: `@phycat`,
+  },
+  {
+    label: `紫色浪漫`,
+    value: `phycatPurple`,
+    desc: `@phycat`,
+  },
+  {
+    label: `红色热情`,
+    value: `phycatRed`,
+    desc: `@phycat`,
+  },
+  // 添加新主题时，在这里添加新的选项
+  // {
+  //   label: `新主题名称`,
+  //   value: `newThemeName`, // 必须与themeMap中的键名一致
+  //   desc: `描述信息`,
+  // },
+]
+
+// 主题映射
 export const themeMap = {
   default: defaultTheme,
   grace: graceTheme,
@@ -880,70 +1019,3 @@ export const themeMap = {
   phycatPurple,
   phycatRed,
 }
-
-// 主题与主题色的映射关系
-export const themeColorMap = {
-  default: `#0F4C81`, // 经典蓝
-  grace: `#92617E`, // 薰衣紫
-  simple: `#333333`, // 石墨黑
-  phycatDark: `#546f99`, // 暗蓝色
-  phycatGreen: `#11aa63`, // 绿色
-  phycatMint: `#00b8a9`, // 薄荷色
-  phycatOrange: `#ff8c42`, // 橙色
-  phycatPlusblue: `#4285f4`, // 蓝色
-  phycatPurple: `#8e44ad`, // 紫色
-  phycatRed: `#e74c3c`, // 红色
-}
-
-export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
-  {
-    label: `经典`,
-    value: `default`,
-    desc: ``,
-  },
-  {
-    label: `优雅`,
-    value: `grace`,
-    desc: `@brzhang`,
-  },
-  {
-    label: `简洁`,
-    value: `simple`,
-    desc: `@okooo5km`,
-  },
-  {
-    label: `暗黑`,
-    value: `phycatDark`,
-    desc: `@phycat`,
-  },
-  {
-    label: `绿色`,
-    value: `phycatGreen`,
-    desc: `@phycat`,
-  },
-  {
-    label: `薄荷`,
-    value: `phycatMint`,
-    desc: `@phycat`,
-  },
-  {
-    label: `橙色`,
-    value: `phycatOrange`,
-    desc: `@phycat`,
-  },
-  {
-    label: `蓝色`,
-    value: `phycatPlusblue`,
-    desc: `@phycat`,
-  },
-  {
-    label: `紫色`,
-    value: `phycatPurple`,
-    desc: `@phycat`,
-  },
-  {
-    label: `红色`,
-    value: `phycatRed`,
-    desc: `@phycat`,
-  },
-]
