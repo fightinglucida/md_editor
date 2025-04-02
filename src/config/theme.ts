@@ -2383,6 +2383,7 @@ const luxuryTheme: Theme = {
     'font-family': `"Georgia", "Times New Roman", serif`,
   },
   block: {
+    figure: {},
     container: {
       'padding': `2.5rem`,
       'max-width': `800px`,
@@ -2643,6 +2644,7 @@ const kidsTheme: Theme = {
     'font-family': `"Ma Shan Zheng", "Comic Sans MS", "Marker Felt", sans-serif`, // 优先使用站酷酷圆
   },
   block: {
+    figure: {},
     container: {
       'padding': `1.5rem`,
       'max-width': `700px`,
@@ -2995,6 +2997,10 @@ const readingTheme: Theme = {
     blockquote_p_important: {},
     blockquote_p_warning: {},
     blockquote_p_caution: {},
+    blockquote_note: {},
+    blockquote_tip: {},
+    blockquote_warning: {},
+    blockquote_caution: {},
 
     // 代码块（阅读友好型）
     code_pre: {
