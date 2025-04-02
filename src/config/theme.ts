@@ -1621,6 +1621,260 @@ const ecommerceTheme: Theme = {
   },
 }
 
+const literaryTheme: Theme = {
+  base: {
+    '--md-primary-color': `#8AA896`, // 主色调：莫兰迪绿
+    '--blockquote-background': `#F1EDE5`, // 引用块背景
+    'text-align': `left`,
+    'line-height': `1.8`,
+    'background': `#F9F7F3`, // 象牙白背景
+    'color': `#5A5A5A`, // 主文字色
+    'font-family': `"LXGW WenKai", "Hiragino Sans GB", "Microsoft YaHei", sans-serif`, // 优先使用霞鹜文楷
+  },
+  block: {
+    container: {
+      'padding': `2rem 1.5rem`,
+      'max-width': `680px`, // 适合公众号的阅读宽度
+      'margin': `0 auto`,
+      'background': `#FDFCFA`, // 内容区轻微提亮
+      'box-shadow': `0 0 12px rgba(0,0,0,0.03)`,
+    },
+
+    // 标题（手写风格）
+    h1: {
+      'font-size': `1.8em`,
+      'font-weight': `400`, // 去粗体
+      'margin': `3rem 0 1.5rem`,
+      'color': `#6E7F80`,
+      'border-bottom': `1px dashed #D4C8B8`, // 虚线分隔
+      'padding-bottom': `0.8rem`,
+      'text-align': `center`,
+      'font-family': `"LXGW ZhenKai", serif`, // 标题用更粗的手写体
+    },
+    h2: {
+      'font-size': `1.5em`,
+      'font-weight': `400`,
+      'margin': `2.5rem 0 1.3rem`,
+      'color': `#7D8E8E`,
+      'border-left': `3px solid #D4C8B8`,
+      'padding-left': `1rem`,
+    },
+    h3: {
+      'font-size': `1.3em`,
+      'font-weight': `400`,
+      'margin': `2rem 0 1.1rem`,
+      'color': `#8A9A9A`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `#D4C8B8`,
+      'text-decoration-thickness': `1px`,
+    },
+    h4: {
+      'font-size': `1.1em`,
+      'font-weight': `400`,
+      'margin': `1.8rem 0 1rem`,
+      'color': `#8AA896`,
+      'font-style': `italic`,
+    },
+    h5: {
+      'font-size': `1em`,
+      'font-weight': `400`,
+      'margin': `1.6rem 0 0.9rem`,
+      'color': `#9AB0A0`,
+    },
+    h6: {
+      'font-size': `0.9em`,
+      'font-weight': `400`,
+      'margin': `1.4rem 0 0.8rem`,
+      'color': `#A8B8AA`,
+    },
+
+    // 段落（首行缩进）
+    p: {
+      'margin': `1.2em 0`,
+      'color': `#5A5A5A`,
+      'font-size': `1.05rem`,
+      'text-indent': `2em`, // 中文段落首行缩进
+      'letter-spacing': `0.05em`, // 字间距
+      'text-align': `justify`,
+      'hyphens': `auto`,
+    },
+
+    // 引用块（古籍样式）
+    blockquote: {
+      'border-left': `none`,
+      'padding': `1.5rem 2rem`,
+      'margin': `2rem 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#6D6D6D`,
+      'font-style': `normal`,
+      'border-radius': `0`,
+      'position': `relative`,
+      'font-family': `"LXGW WenKai", serif`,
+      '&::before': {
+        'content': `"“"`,
+        'font-size': `4em`,
+        'color': `#D4C8B8`,
+        'position': `absolute`,
+        'left': `0.2rem`,
+        'top': `0.5rem`,
+        'line-height': `1`,
+        'opacity': `0.3`,
+      },
+    },
+
+    blockquote_p: {
+      'margin': `0.5em 0`,
+      'color': `inherit`,
+      'font-size': `0.95em`,
+    },
+
+    // 代码块（复古印刷风）
+    code_pre: {
+      'background': `#F1EDE5`,
+      'border-radius': `0`,
+      'padding': `1.5rem`,
+      'overflow-x': `auto`,
+      'font-family': `"LXGW WenKai Mono", monospace`,
+      'font-size': `0.95em`,
+      'line-height': `1.6`,
+      'margin': `2rem 0`,
+      'border': `1px solid #D4C8B8`,
+      'color': `#5A5A5A`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `#F1EDE5`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `0`,
+      'font-family': `"LXGW WenKai Mono", monospace`,
+      'font-size': `0.9em`,
+      'color': `#8AA896`,
+      'border': `1px solid #D4C8B8`,
+    },
+
+    // 图片（复古相框效果）
+    image: {
+      'display': `block`,
+      'max-width': `90%`,
+      'height': `auto`,
+      'margin': `2.5rem auto`,
+      'border': `1px solid #D4C8B8`,
+      'padding': `6px`,
+      'background': `white`,
+      'box-shadow': `0 2px 8px rgba(0,0,0,0.05)`,
+      'filter': `sepia(15%) brightness(98%)`, // 复古滤镜
+    },
+
+    // 列表（手写风格）
+    ol: {
+      'padding-left': `2.5em`,
+      'margin': `2rem 0`,
+      'color': `#5A5A5A`,
+      'list-style-type': `cjk-ideographic`, // 中文数字
+    },
+    ul: {
+      'padding-left': `2.5em`,
+      'margin': `2rem 0`,
+      'color': `#5A5A5A`,
+      'list-style-type': `none`,
+      '& > li': {
+        'position': `relative`,
+        '&::before': {
+          'content': `"·"`,
+          'position': `absolute`,
+          'left': `-1em`,
+          'font-size': `1.5em`,
+          'color': `#8AA896`,
+        },
+      },
+    },
+
+    // 表格（极简边框）
+    table: {
+      'border-collapse': `collapse`,
+      'width': `100%`,
+      'margin': `2.5rem 0`,
+      'font-size': `0.95em`,
+      'border': `1px solid #D4C8B8`,
+    },
+    thead: {
+      'background': `#F1EDE5`,
+      'font-weight': `400`,
+    },
+    td: {
+      padding: `0.8rem 1.2rem`,
+      border: `1px solid #D4C8B8`,
+    },
+
+    // 分隔线（手绘虚线）
+    hr: {
+      border: `none`,
+      height: `1px`,
+      background: `repeating-linear-gradient(to right, #D4C8B8, #D4C8B8 4px, transparent 4px, transparent 8px)`,
+      margin: `3.5rem 0`,
+    },
+
+    // 脚注（古籍注疏样式）
+    footnotes: {
+      'border-top': `1px dashed #D4C8B8`,
+      'margin-top': `4rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.85em`,
+      'color': `#8A8A8A`,
+    },
+  },
+  inline: {
+    listitem: {
+      'margin': `0.8em 0`,
+      'line-height': `1.8`,
+    },
+
+    codespan: {
+      'background': `#F1EDE5`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `0`,
+      'font-family': `"LXGW WenKai Mono", monospace`,
+      'font-size': `0.9em`,
+      'color': `#8AA896`,
+      'border': `1px solid #D4C8B8`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#6E7F80`,
+    },
+
+    link: {
+      'color': `#8AA896`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `#D4C8B8`,
+      'text-underline-offset': `0.2em`,
+      'transition': `all 0.2s ease`,
+    },
+
+    strong: {
+      'font-weight': `500`, // 适度加粗
+      'color': `#6E7F80`,
+      'letter-spacing': `0.02em`,
+    },
+
+    footnote: {
+      'font-size': `0.85em`,
+      'color': `#8A8A8A`,
+      'vertical-align': `super`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.9em`,
+      'color': `#8A8A8A`,
+      'margin-top': `0.5rem`,
+      'font-style': `italic`,
+    },
+  },
+}
+
 // 主题与主题色的映射关系
 // 添加新主题时，在这里添加对应的主题色
 export const themeColorMap = {
@@ -1635,6 +1889,7 @@ export const themeColorMap = {
   minimal: `#333333`, // 石墨黑
   letter: `#5D4037`, // 信纸黑
   ecommerce: `#FF6B35`, // 电商橙
+  literary: `#8AA896`, // 文学绿
   // 在这里添加新主题的主题色
   // 格式: 主题名: `颜色代码`, // 颜色描述
 }
@@ -1696,6 +1951,11 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
     value: `ecommerce`,
     desc: `@linxi9948`,
   },
+  {
+    label: `文艺风格`,
+    value: `literary`,
+    desc: `@linxi9948`,
+  },
   // 添加新主题时，在这里添加新的选项
   // {
   //   label: `新主题名称`,
@@ -1717,4 +1977,5 @@ export const themeMap = {
   minimal: minimalTheme,
   letter: letterTheme,
   ecommerce: ecommerceTheme,
+  literary: literaryTheme,
 }
