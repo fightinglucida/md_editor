@@ -1710,16 +1710,6 @@ const literaryTheme: Theme = {
       'border-radius': `0`,
       'position': `relative`,
       'font-family': `"LXGW WenKai", serif`,
-      '&::before': {
-        'content': `"“"`,
-        'font-size': `4em`,
-        'color': `#D4C8B8`,
-        'position': `absolute`,
-        'left': `0.2rem`,
-        'top': `0.5rem`,
-        'line-height': `1`,
-        'opacity': `0.3`,
-      },
     },
 
     blockquote_p: {
@@ -1778,16 +1768,6 @@ const literaryTheme: Theme = {
       'margin': `2rem 0`,
       'color': `#5A5A5A`,
       'list-style-type': `none`,
-      '& > li': {
-        'position': `relative`,
-        '&::before': {
-          'content': `"·"`,
-          'position': `absolute`,
-          'left': `-1em`,
-          'font-size': `1.5em`,
-          'color': `#8AA896`,
-        },
-      },
     },
 
     // 表格（极简边框）
@@ -1825,6 +1805,7 @@ const literaryTheme: Theme = {
     },
   },
   inline: {
+    wx_link: defaultTheme.inline.wx_link,
     listitem: {
       'margin': `0.8em 0`,
       'line-height': `1.8`,
@@ -1875,6 +1856,222 @@ const literaryTheme: Theme = {
   },
 }
 
+const newsTheme: Theme = {
+  base: {
+    '--md-primary-color': `#C33C2D`, // 主色调：报业红
+    '--blockquote-background': `#F5F5F5`, // 引用块背景
+    'text-align': `left`,
+    'line-height': `1.75`,
+    'background': `#FFFFFF`,
+    'color': `#222222`, // 高对比度文字
+    'font-family': `"PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif`,
+  },
+  block: {
+    container: {
+      'padding': `1.5rem`,
+      'max-width': `740px`, // 新闻标准宽度
+      'margin': `0 auto`,
+      'border-top': `4px solid #C33C2D`, // 报头红线
+    },
+
+    // 标题（报刊风格）
+    h1: {
+      'font-size': `1.8em`,
+      'font-weight': `700`,
+      'margin': `1.5rem 0 1rem`,
+      'color': `#222222`,
+      'border-left': `4px solid #C33C2D`,
+      'padding-left': `1rem`,
+      'line-height': `1.3`,
+    },
+    h2: {
+      'font-size': `1.5em`,
+      'font-weight': `600`,
+      'margin': `1.8rem 0 1rem`,
+      'color': `#333333`,
+      'border-bottom': `1px solid #E0E0E0`,
+      'padding-bottom': `0.5rem`,
+    },
+    h3: {
+      'font-size': `1.3em`,
+      'font-weight': `600`,
+      'margin': `1.6rem 0 0.9rem`,
+      'color': `#444444`,
+    },
+    h4: {
+      'font-size': `1.1em`,
+      'font-weight': `500`,
+      'margin': `1.4rem 0 0.8rem`,
+      'color': `#C33C2D`, // 小标题用主色
+    },
+    h5: {
+      'font-size': `1em`,
+      'font-weight': `500`,
+      'margin': `1.2rem 0 0.7rem`,
+      'color': `#666666`,
+    },
+    h6: {
+      'font-size': `0.9em`,
+      'font-weight': `500`,
+      'margin': `1rem 0 0.6rem`,
+      'color': `#888888`,
+    },
+
+    // 段落（紧凑排版）
+    p: {
+      'margin': `0.8em 0`,
+      'color': `#222222`,
+      'font-size': `1rem`,
+      'text-align': `justify`,
+      'text-justify': `inter-ideograph`, // 优化中文对齐
+    },
+
+    // 引用块（新闻摘录样式）
+    blockquote: {
+      'border-left': `3px solid #999999`,
+      'padding': `1rem 1.5rem`,
+      'margin': `1.5rem 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#444444`,
+      'font-style': `normal`,
+      'font-size': `0.95em`,
+    },
+
+    blockquote_p: {
+      margin: `0.5em 0`,
+      color: `inherit`,
+    },
+
+    // 代码块（简约风格）
+    code_pre: {
+      'background': `#F5F5F5`,
+      'border-radius': `4px`,
+      'padding': `1.2rem`,
+      'overflow-x': `auto`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.9em`,
+      'line-height': `1.5`,
+      'margin': `1.5rem 0`,
+      'border': `1px solid #E0E0E0`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `#F5F5F5`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `3px`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.9em`,
+      'color': `#C33C2D`,
+      'border': `1px solid #E0E0E0`,
+    },
+
+    // 图片（标准新闻配图）
+    image: {
+      'display': `block`,
+      'max-width': `100%`,
+      'height': `auto`,
+      'margin': `1.5rem auto`,
+      'border': `none`,
+    },
+
+    // 列表（紧凑排版）
+    ol: {
+      'padding-left': `1.8em`,
+      'margin': `1.2rem 0`,
+      'color': `#222222`,
+    },
+    ul: {
+      'padding-left': `1.8em`,
+      'margin': `1.2rem 0`,
+      'color': `#222222`,
+      'list-style-type': `disc`,
+    },
+
+    // 表格（数据表格样式）
+    table: {
+      'border-collapse': `collapse`,
+      'width': `100%`,
+      'margin': `1.5rem 0`,
+      'font-size': `0.95em`,
+      'border': `1px solid #E0E0E0`,
+    },
+    thead: {
+      'background': `#F5F5F5`,
+      'font-weight': `600`,
+    },
+    td: {
+      padding: `0.8rem 1rem`,
+      border: `1px solid #E0E0E0`,
+    },
+
+    // 分隔线（报刊分隔线）
+    hr: {
+      border: `none`,
+      height: `1px`,
+      background: `#E0E0E0`,
+      margin: `2rem 0`,
+    },
+
+    // 脚注（新闻来源样式）
+    footnotes: {
+      'border-top': `1px solid #E0E0E0`,
+      'margin-top': `2.5rem`,
+      'padding-top': `1rem`,
+      'font-size': `0.85em`,
+      'color': `#666666`,
+    },
+  },
+  inline: {
+    wx_link: defaultTheme.inline.wx_link,
+    listitem: {
+      'margin': `0.4em 0`,
+      'line-height': `1.6`,
+    },
+
+    codespan: {
+      'background': `#F5F5F5`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `3px`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.9em`,
+      'color': `#C33C2D`,
+      'border': `1px solid #E0E0E0`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#444444`,
+    },
+
+    link: {
+      'color': `#1A73E8`, // 蓝色链接更符合新闻习惯
+      'text-decoration': `none`,
+      'border-bottom': `1px solid rgba(26,115,232,0.3)`,
+      '&:hover': {
+        'border-bottom-color': `currentColor`,
+      },
+    },
+
+    strong: {
+      'font-weight': `600`,
+      'color': `#222222`,
+    },
+
+    footnote: {
+      'font-size': `0.85em`,
+      'color': `#666666`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.85em`,
+      'color': `#666666`,
+      'margin-top': `0.5rem`,
+    },
+  },
+}
+
 // 主题与主题色的映射关系
 // 添加新主题时，在这里添加对应的主题色
 export const themeColorMap = {
@@ -1890,6 +2087,7 @@ export const themeColorMap = {
   letter: `#5D4037`, // 信纸黑
   ecommerce: `#FF6B35`, // 电商橙
   literary: `#8AA896`, // 文学绿
+  news: `#C33C2D`, // 新闻红
   // 在这里添加新主题的主题色
   // 格式: 主题名: `颜色代码`, // 颜色描述
 }
@@ -1956,6 +2154,11 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
     value: `literary`,
     desc: `@linxi9948`,
   },
+  {
+    label: `新闻主题`,
+    value: `news`,
+    desc: `@linxi9948`,
+  },
   // 添加新主题时，在这里添加新的选项
   // {
   //   label: `新主题名称`,
@@ -1978,4 +2181,5 @@ export const themeMap = {
   letter: letterTheme,
   ecommerce: ecommerceTheme,
   literary: literaryTheme,
+  news: newsTheme,
 }
