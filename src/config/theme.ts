@@ -286,151 +286,6 @@ const defaultTheme: Theme = {
   },
 }
 
-// 优雅主题
-const graceTheme = toMerged(defaultTheme, {
-  base: {
-  },
-  block: {
-    'container': {},
-    'h1': {
-      'padding': `0.5em 1em`,
-      'border-bottom': `2px solid var(--md-primary-color)`,
-      'font-size': `1.4em`,
-      'text-shadow': `2px 2px 4px rgba(0,0,0,0.1)`,
-    },
-
-    'h2': {
-      'padding': `0.3em 1em`,
-      'border-radius': `8px`,
-      'font-size': `1.3em`,
-      'box-shadow': `0 4px 6px rgba(0,0,0,0.1)`,
-    },
-
-    'h3': {
-      'padding-left': `12px`,
-      'font-size': `1.2em`,
-      'border-left': `4px solid var(--md-primary-color)`,
-      'border-bottom': `1px dashed var(--md-primary-color)`,
-    },
-
-    'h4': {
-      'font-size': `1.1em`,
-    },
-
-    'h5': {
-      'font-size': `1em`,
-    },
-
-    'h6': {
-      'font-size': `1em`,
-    },
-
-    'p': {
-    },
-
-    'blockquote': {
-      'font-style': `italic`,
-      'padding': `1em 1em 1em 2em`,
-      'border-left': `4px solid var(--md-primary-color)`,
-      'border-radius': `6px`,
-      'color': `rgba(0,0,0,0.6)`,
-      'box-shadow': `0 4px 6px rgba(0,0,0,0.05)`,
-      'margin-bottom': `1em`,
-    },
-
-    'blockquote_p': {
-    },
-
-    'markdown-alert': {
-      'font-style': `italic`,
-    },
-
-    'code_pre': {
-      'box-shadow': `inset 0 0 10px rgba(0,0,0,0.05)`,
-    },
-
-    'code': {
-      'white-space': `pre-wrap`,
-      'font-family': `'Fira Code', Menlo, Operator Mono, Consolas, Monaco, monospace`,
-    },
-
-    'image': {
-      'border-radius': `8px`,
-      'box-shadow': `0 4px 8px rgba(0,0,0,0.1)`,
-    },
-
-    'ol': {
-      'padding-left': `1.5em`,
-    },
-
-    'ul': {
-      'list-style': `none`,
-      'padding-left': `1.5em`,
-    },
-
-    'footnotes': {
-
-    },
-
-    'figure': {
-
-    },
-
-    'hr': {
-      height: `1px`,
-      border: `none`,
-      margin: `2em 0`,
-      background: `linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.1), rgba(0,0,0,0))`,
-    },
-  },
-  inline: {
-    listitem: {
-      margin: `0.5em 8px`,
-    },
-
-    codespan: {
-    },
-
-    em: {
-    },
-
-    link: {
-    },
-
-    wx_link: {
-    },
-
-    strong: {
-    },
-
-    table: {
-      'border-collapse': `separate`,
-      'border-spacing': `0`,
-      'border-radius': `8px`,
-      'margin': `1em 8px`,
-      'color': `hsl(var(--foreground))`,
-      'box-shadow': `0 4px 6px rgba(0,0,0,0.1)`,
-      'overflow': `hidden`,
-    },
-
-    thead: {
-      color: `#fff`,
-    },
-
-    td: {
-      padding: `0.5em 1em`,
-    },
-
-    footnote: {
-      color: `rgba(0,0,0,0.5)`,
-    },
-
-    figcaption: {
-
-    },
-  },
-})
-
 // 添加7个新主题
 // ===== 主题定义开始 =====
 // 创建新主题的步骤：
@@ -951,125 +806,6 @@ const letterTheme: Theme = {
   },
 }
 
-// 暗黑主题示例
-const phycatDark = toMerged(defaultTheme, {
-  base: {
-    // 主题的主色调，用于标题、边框等元素
-    '--md-primary-color': `#546f99`,
-    // 文本对齐方式
-    'text-align': `left`,
-    // 行高
-    'line-height': `1.75`,
-    // 背景色（暗色主题特有）
-    'background-color': `#222222`,
-    // 文本颜色（暗色主题特有）
-    'color': `#c5c5c5`,
-  },
-  block: {
-    // 一级标题样式
-    h1: {
-      'display': `table`,
-      'padding': `0 1em`,
-      'border-bottom': `2px solid var(--md-primary-color)`,
-      'margin': `2em auto 1em`,
-      'color': `#5c7aaa`, // 标题颜色
-      'font-size': `1.6em`,
-      'font-weight': `bold`,
-      'text-align': `center`,
-    },
-    // 二级标题样式
-    h2: {
-      display: `table`,
-      padding: `0.2em 1em`,
-      margin: `4em auto 2em`,
-      color: `#fff`,
-      background: `#6785b4`, // 背景色，可以是纯色或渐变
-    },
-    // 三级标题样式
-    h3: {
-      'padding-left': `8px`,
-      'border-left': `3px solid var(--md-primary-color)`,
-      'margin': `2em 8px 0.75em 0`,
-      'color': `#ffffff`,
-      'font-size': `1.1em`,
-      'font-weight': `bold`,
-      'line-height': `1.2`,
-    },
-    // 四级标题样式
-    h4: {
-      'margin': `2em 8px 0.5em`,
-      'color': `var(--md-primary-color)`,
-      'font-size': `1em`,
-      'font-weight': `bold`,
-    },
-    // 段落样式
-    p: {
-      'margin': `1.5em 8px`,
-      'letter-spacing': `0.1em`,
-      'color': `#ffffff`,
-    },
-    // 引用样式
-    blockquote: {
-      'font-style': `normal`,
-      'padding': `1em`,
-      'border-left': `4px solid var(--md-primary-color)`,
-      'border-radius': `6px`,
-      'color': `rgba(197, 197, 197, 0.8)`,
-      'background': `#25272E`,
-    },
-    // 代码块样式
-    code_pre: {
-      'font-size': `14px`,
-      'overflow-x': `auto`,
-      'border-radius': `8px`,
-      'padding': `1em`,
-      'line-height': `1.5`,
-      'margin': `10px 8px`,
-      'background': `#25272E`,
-    },
-    // 行内代码样式
-    code: {
-      'white-space': `pre-wrap`,
-      'font-family': `Menlo, Operator Mono, Consolas, Monaco, monospace`,
-    },
-    // 图片样式
-    image: {
-      'border-radius': `8px`,
-      'border': `1px solid rgba(0, 0, 0, 0.04)`,
-    },
-    // 有序列表
-    ol: {
-      'padding-left': `1em`,
-      'margin-left': `0`,
-      'color': `#ffffff`,
-    },
-
-    // 无序列表
-    ul: {
-      'list-style': `circle`,
-      'padding-left': `1em`,
-      'margin-left': `0`,
-      'color': `#ffffff`,
-    },
-  },
-
-  inline: {
-    // 代码段样式
-    codespan: {
-      'font-size': `90%`,
-      'color': `#e6dada`,
-      'background': `#708ab3`,
-      'padding': `3px 5px`,
-      'border-radius': `4px`,
-    },
-    // 加粗样式
-    strong: {
-      'color': `var(--md-primary-color)`,
-      'font-weight': `bold`,
-    },
-  },
-})
-
 // 绿色主题示例
 const phycatGreen = toMerged(defaultTheme, {
   base: {
@@ -1293,20 +1029,537 @@ const phycatRed = toMerged(defaultTheme, {
   },
 })
 
+// 科技主题
+const techTheme: Theme = {
+  base: {
+    '--md-primary-color': `#2196F3`,
+    '--blockquote-background': `rgba(11, 31, 53, 0.5)`,
+    'text-align': `left`,
+    'line-height': `1.6`,
+    'background': `#0A192F`,
+    'color': `#E6F1FF`,
+    'font-family': `'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif`,
+  },
+  block: {
+    container: {
+      'background': `linear-gradient(145deg, #0A192F 0%, #172A45 100%)`,
+      'padding': `2.5rem`,
+      'max-width': `900px`,
+      'margin': `2rem auto`,
+      'border-radius': `8px`,
+    },
+
+    // 标题（带科技感渐变背景）
+    h1: {
+      'font-size': `2.2em`,
+      'font-weight': `600`,
+      'margin': `3rem 0 2rem`,
+      'background': `linear-gradient(90deg, rgba(33,150,243,0.2) 0%, rgba(33,150,243,0) 100%)`,
+      'padding': `1rem 1.5rem`,
+      'border-left': `4px solid #2196F3`,
+      'color': `#E6F1FF`,
+      'letter-spacing': `-0.02em`,
+    },
+    h2: {
+      'font-size': `1.8em`,
+      'font-weight': `600`,
+      'margin': `2.5rem 0 1.8rem`,
+      'background': `linear-gradient(90deg, rgba(33,150,243,0.15) 0%, rgba(33,150,243,0) 100%)`,
+      'padding': `0.8rem 1.5rem`,
+      'border-left': `3px solid #2196F3`,
+      'color': `#CCD6F6`,
+    },
+    h3: {
+      'font-size': `1.5em`,
+      'font-weight': `500`,
+      'margin': `2.2rem 0 1.5rem`,
+      'background': `linear-gradient(90deg, rgba(33,150,243,0.1) 0%, rgba(33,150,243,0) 100%)`,
+      'padding': `0.6rem 1.5rem`,
+      'border-left': `2px solid #2196F3`,
+      'color': `#A8B2D1`,
+    },
+    h4: {
+      'font-size': `1.3em`,
+      'font-weight': `500`,
+      'margin': `2rem 0 1.3rem`,
+      'color': `#8892B0`,
+      'text-shadow': `0 0 8px rgba(33,150,243,0.3)`,
+    },
+    h5: {
+      'font-size': `1.1em`,
+      'font-weight': `500`,
+      'margin': `1.8rem 0 1.1rem`,
+      'color': `#607BBA`,
+      'border-bottom': `1px dashed rgba(33,150,243,0.3)`,
+      'padding-bottom': `0.3rem`,
+    },
+    h6: {
+      'font-size': `1em`,
+      'font-weight': `500`,
+      'margin': `1.6rem 0 1rem`,
+      'color': `#495C8A`,
+    },
+
+    // 段落
+    p: {
+      'margin': `1.2em 0`,
+      'color': `#E6F1FF`,
+      'font-size': `1.05rem`,
+      'letter-spacing': `0.01em`,
+    },
+
+    // 引用块（科技感半透明背景）
+    blockquote: {
+      'border-left': `3px solid rgba(33,150,243,0.5)`,
+      'padding': `1.5rem`,
+      'margin': `2rem 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#CCD6F6`,
+      'font-style': `normal`,
+      'border-radius': `0 6px 6px 0`,
+      'backdrop-filter': `blur(4px)`,
+    },
+
+    blockquote_p: {
+      margin: `0.8em 0`,
+      color: `inherit`,
+    },
+
+    // 警告块（科技蓝调）
+    blockquote_note: {
+      'border-left-color': `#478BE6`,
+      'background': `rgba(71, 139, 230, 0.1)`,
+    },
+    blockquote_tip: {
+      'border-left-color': `#57AB5A`,
+      'background': `rgba(87, 171, 90, 0.1)`,
+    },
+    blockquote_warning: {
+      'border-left-color': `#F4B740`,
+      'background': `rgba(244, 183, 64, 0.1)`,
+    },
+    blockquote_caution: {
+      'border-left-color': `#E5534B`,
+      'background': `rgba(229, 83, 75, 0.1)`,
+    },
+
+    blockquote_title: {
+      'display': `flex`,
+      'align-items': `center`,
+      'gap': `0.5em`,
+      'font-weight': `600`,
+      'margin-bottom': `0.8em`,
+      'text-transform': `uppercase`,
+      'letter-spacing': `0.05em`,
+      'font-size': `0.9em`,
+    },
+
+    // 代码块（深色终端风格）
+    code_pre: {
+      'background': `#0F1C2E`,
+      'border-radius': `6px`,
+      'padding': `1.5rem`,
+      'overflow-x': `auto`,
+      'font-family': `'SF Mono', 'Roboto Mono', monospace`,
+      'font-size': `0.95em`,
+      'line-height': `1.5`,
+      'margin': `2rem 0`,
+      'border': `1px solid rgba(33,150,243,0.3)`,
+      'box-shadow': `0 4px 12px rgba(0,0,0,0.2)`,
+      'color': `#E6F1FF`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `rgba(33,150,243,0.1)`,
+      'padding': `0.3em 0.5em`,
+      'border-radius': `3px`,
+      'font-family': `'SF Mono', 'Roboto Mono', monospace`,
+      'font-size': `0.9em`,
+      'color': `#64B5F6`,
+      'border': `1px solid rgba(33,150,243,0.3)`,
+    },
+
+    // 图片（带科技感边框）
+    image: {
+      'display': `block`,
+      'max-width': `100%`,
+      'height': `auto`,
+      'margin': `2rem auto`,
+      'border-radius': `4px`,
+      'border': `1px solid rgba(33,150,243,0.3)`,
+      'box-shadow': `0 0 20px rgba(33,150,243,0.1)`,
+    },
+
+    // 列表（简洁科技风）
+    ol: {
+      'padding-left': `2em`,
+      'margin': `1.8em 0`,
+      'color': `#E6F1FF`,
+      'list-style-type': `decimal-leading-zero`,
+    },
+    ul: {
+      'padding-left': `2em`,
+      'margin': `1.8em 0`,
+      'color': `#E6F1FF`,
+      'list-style-type': `none`,
+    },
+
+    // 表格（数据表风格）
+    table: {
+      'border-collapse': `collapse`,
+      'width': `100%`,
+      'margin': `2rem 0`,
+      'font-size': `0.95em`,
+      'border': `1px solid rgba(33,150,243,0.3)`,
+      'border-radius': `6px`,
+      'overflow': `hidden`,
+    },
+    thead: {
+      'background': `rgba(33,150,243,0.2)`,
+      'font-weight': `600`,
+    },
+    td: {
+      padding: `1rem`,
+      border: `1px solid rgba(33,150,243,0.2)`,
+      color: `#E6F1FF`,
+    },
+
+    // 分隔线（科技感发光效果）
+    hr: {
+      'border': `none`,
+      'height': `1px`,
+      'background': `linear-gradient(to right, transparent, rgba(33,150,243,0.5), transparent)`,
+      'margin': `3rem 0`,
+      'box-shadow': `0 0 8px rgba(33,150,243,0.3)`,
+    },
+
+    // 脚注
+    footnotes: {
+      'border-top': `1px solid rgba(33,150,243,0.3)`,
+      'margin-top': `3.5rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.85em`,
+      'color': `#8892B0`,
+    },
+  },
+  inline: {
+    listitem: {
+      'margin': `0.6em 0`,
+      'line-height': `1.7`,
+    },
+
+    codespan: {
+      'background': `rgba(33,150,243,0.1)`,
+      'padding': `0.3em 0.5em`,
+      'border-radius': `3px`,
+      'font-family': `'SF Mono', 'Roboto Mono', monospace`,
+      'font-size': `0.9em`,
+      'color': `#64B5F6`,
+      'border': `1px solid rgba(33,150,243,0.3)`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#A8B2D1`,
+    },
+
+    link: {
+      'color': `#64B5F6`,
+      'text-decoration': `none`,
+      'border-bottom': `1px dashed rgba(100,181,246,0.5)`,
+      'transition': `all 0.2s ease`,
+    },
+
+    strong: {
+      'font-weight': `600`,
+      'color': `#E6F1FF`,
+      'text-shadow': `0 0 5px rgba(33,150,243,0.3)`,
+    },
+
+    footnote: {
+      'font-size': `0.85em`,
+      'color': `#8892B0`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.9em`,
+      'color': `#8892B0`,
+      'margin-top': `0.8rem`,
+    },
+  },
+}
+
+const ecommerceTheme: Theme = {
+  base: {
+    '--md-primary-color': `#FF6B35`, // 主色调为电商橙
+    '--blockquote-background': `#FFF5F0`,
+    'text-align': `left`,
+    'line-height': `1.7`,
+    'background': `#FFFFFF`,
+    'font-family': `'Poppins', -apple-system, BlinkMacSystemFont, sans-serif`,
+    'color': `#333333`,
+  },
+  block: {
+    container: {
+      'padding': `2rem`,
+      'max-width': `900px`,
+      'margin': `0 auto`,
+    },
+
+    // 标题（电商促销风格）
+    h1: {
+      'font-size': `2.4em`,
+      'font-weight': `800`,
+      'margin': `2.5rem 0 1.8rem`,
+      'color': `#FF6B35`,
+      'text-align': `center`,
+      'text-transform': `uppercase`,
+      'letter-spacing': `0.05em`,
+      'position': `relative`,
+      'padding-bottom': `1rem`,
+    },
+    h2: {
+      'font-size': `1.8em`,
+      'font-weight': `700`,
+      'margin': `2.2rem 0 1.5rem`,
+      'color': `#FF8C42`,
+      'border-bottom': `3px solid #FFE8DC`,
+      'padding-bottom': `0.5rem`,
+      'display': `inline-block`,
+    },
+    h3: {
+      'font-size': `1.5em`,
+      'font-weight': `600`,
+      'margin': `2rem 0 1.3rem`,
+      'color': `#FF9F4D`,
+      'background': `#FFF5EF`,
+      'padding': `0.5rem 1rem`,
+      'border-radius': `4px`,
+    },
+    h4: {
+      'font-size': `1.3em`,
+      'font-weight': `600`,
+      'margin': `1.8rem 0 1.1rem`,
+      'color': `#FFB162`,
+    },
+    h5: {
+      'font-size': `1.1em`,
+      'font-weight': `600`,
+      'margin': `1.6rem 0 1rem`,
+      'color': `#FFC27D`,
+    },
+    h6: {
+      'font-size': `1em`,
+      'font-weight': `600`,
+      'margin': `1.4rem 0 0.9rem`,
+      'color': `#FFD3A0`,
+    },
+
+    // 段落
+    p: {
+      'margin': `1.2em 0`,
+      'color': `#555555`,
+      'font-size': `1.05rem`,
+    },
+
+    // 引用块（促销公告风格）
+    blockquote: {
+      'border-left': `4px solid #FF6B35`,
+      'padding': `1.5rem`,
+      'margin': `2rem 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#666666`,
+      'font-style': `normal`,
+      'border-radius': `0 6px 6px 0`,
+    },
+
+    blockquote_p: {
+      margin: `0.8em 0`,
+      color: `inherit`,
+    },
+
+    // 警告块（电商场景化）
+    blockquote_note: {
+      'border-left-color': `#4285F4`,
+      'background': `#F0F7FF`,
+    },
+    blockquote_tip: {
+      'border-left-color': `#34A853`,
+      'background': `#F0FFF4`,
+      'color': `#155724`,
+    },
+    blockquote_warning: {
+      'border-left-color': `#FBBC05`,
+      'background': `#FFF9E6`,
+      'color': `#856404`,
+    },
+    blockquote_caution: {
+      'border-left-color': `#EA4335`,
+      'background': `#FFF0F0`,
+      'color': `#721C24`,
+    },
+
+    blockquote_title: {
+      'display': `flex`,
+      'align-items': `center`,
+      'gap': `0.5em`,
+      'font-weight': `700`,
+      'margin-bottom': `0.8em`,
+      'font-size': `1.1em`,
+    },
+
+    // 代码块（简洁风格）
+    code_pre: {
+      'background': `#F8F9FA`,
+      'border-radius': `6px`,
+      'padding': `1.5rem`,
+      'overflow-x': `auto`,
+      'font-family': `'Roboto Mono', monospace`,
+      'font-size': `0.95em`,
+      'line-height': `1.5`,
+      'margin': `2rem 0`,
+      'border': `1px solid #EEEEEE`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `#F8F9FA`,
+      'padding': `0.3em 0.5em`,
+      'border-radius': `3px`,
+      'font-family': `'Roboto Mono', monospace`,
+      'font-size': `0.9em`,
+      'color': `#E83E8C`,
+      'border': `1px solid #EEEEEE`,
+    },
+
+    // 图片（商品展示风格）
+    image: {
+      'display': `block`,
+      'max-width': `100%`,
+      'height': `auto`,
+      'margin': `2rem auto`,
+      'border-radius': `8px`,
+      'box-shadow': `0 4px 12px rgba(0,0,0,0.1)`,
+      'transition': `transform 0.3s ease`,
+    },
+
+    // 列表（促销列表风格）
+    ol: {
+      'padding-left': `2em`,
+      'margin': `1.8em 0`,
+      'color': `#555555`,
+    },
+    ul: {
+      'padding-left': `2em`,
+      'margin': `1.8em 0`,
+      'color': `#555555`,
+      'list-style-type': `none`,
+    },
+
+    // 表格（数据对比风格）
+    table: {
+      'border-collapse': `separate`,
+      'width': `100%`,
+      'margin': `2rem 0`,
+      'font-size': `0.95em`,
+      'border-spacing': `0`,
+      'border-radius': `8px`,
+      'overflow': `hidden`,
+      'box-shadow': `0 2px 8px rgba(0,0,0,0.05)`,
+    },
+    thead: {
+      'background': `#FF6B35`,
+      'font-weight': `600`,
+      'color': `white`,
+    },
+    td: {
+      'padding': `1rem`,
+      'border-bottom': `1px solid #EEEEEE`,
+      'color': `#555555`,
+    },
+
+    // 分隔线（促销风格）
+    hr: {
+      'border': `none`,
+      'height': `4px`,
+      'background': `linear-gradient(to right, #FF6B35, #FF8C42, #FFD3A0, #FF8C42, #FF6B35)`,
+      'margin': `3rem 0`,
+      'border-radius': `2px`,
+    },
+
+    // 脚注
+    footnotes: {
+      'border-top': `1px solid #EEEEEE`,
+      'margin-top': `3.5rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.85em`,
+      'color': `#888888`,
+    },
+  },
+  inline: {
+    listitem: {
+      'margin': `0.6em 0`,
+      'line-height': `1.7`,
+    },
+
+    codespan: {
+      'background': `#F8F9FA`,
+      'padding': `0.3em 0.5em`,
+      'border-radius': `3px`,
+      'font-family': `'Roboto Mono', monospace`,
+      'font-size': `0.9em`,
+      'color': `#E83E8C`,
+      'border': `1px solid #EEEEEE`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#666666`,
+    },
+
+    link: {
+      'color': `#FF6B35`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `#FFD3A0`,
+      'font-weight': `500`,
+      'transition': `all 0.2s ease`,
+    },
+
+    strong: {
+      'font-weight': `700`,
+      'color': `#FF6B35`,
+    },
+
+    footnote: {
+      'font-size': `0.85em`,
+      'color': `#888888`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.9em`,
+      'color': `#888888`,
+      'margin-top': `0.8rem`,
+    },
+  },
+}
+
 // 主题与主题色的映射关系
 // 添加新主题时，在这里添加对应的主题色
 export const themeColorMap = {
   default: `#0F4C81`, // 经典蓝
-  grace: `#92617E`, // 薰衣紫
-  minimal: `#333333`, // 石墨黑
-  letter: `#5D4037`, // 信纸黑
-  phycatDark: `#546f99`, // 暗蓝色
   phycatGreen: `#11aa63`, // 绿色
   phycatMint: `#1FA2FF`, // 薄荷色
   phycatOrange: `#ff8c42`, // 橙色
   phycatPlusblue: `#4285f4`, // 蓝色
   phycatPurple: `#8e44ad`, // 紫色
   phycatRed: `#e74c3c`, // 红色
+  tech: `#2196F3`, // 蓝色
+  minimal: `#333333`, // 石墨黑
+  letter: `#5D4037`, // 信纸黑
+  ecommerce: `#FF6B35`, // 电商橙
   // 在这里添加新主题的主题色
   // 格式: 主题名: `颜色代码`, // 颜色描述
 }
@@ -1316,27 +1569,7 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
   {
     label: `蓝色经典`, // 显示在菜单中的名称
     value: `default`, // 对应themeMap中的键名
-    desc: ``, // 描述信息
-  },
-  {
-    label: `深沉优雅`,
-    value: `grace`,
-    desc: `@brzhang`,
-  },
-  {
-    label: `极简风格`,
-    value: `minimal`,
-    desc: `@linxi9948`,
-  },
-  {
-    label: `信纸风格`,
-    value: `letter`,
-    desc: `@linxi9948`,
-  },
-  {
-    label: `暗黑江湖`,
-    value: `phycatDark`,
-    desc: `@phycat`,
+    desc: `@Doocs`, // 描述信息
   },
   {
     label: `绿色炫丽`,
@@ -1368,6 +1601,26 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
     value: `phycatRed`,
     desc: `@phycat`,
   },
+  {
+    label: `科技风格`,
+    value: `tech`,
+    desc: `@linxi9948`,
+  },
+  {
+    label: `极简风格`,
+    value: `minimal`,
+    desc: `@linxi9948`,
+  },
+  {
+    label: `信纸风格`,
+    value: `letter`,
+    desc: `@linxi9948`,
+  },
+  {
+    label: `电商风格`,
+    value: `ecommerce`,
+    desc: `@linxi9948`,
+  },
   // 添加新主题时，在这里添加新的选项
   // {
   //   label: `新主题名称`,
@@ -1379,14 +1632,14 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
 // 主题映射
 export const themeMap = {
   default: defaultTheme,
-  grace: graceTheme,
-  minimal: minimalTheme,
-  letter: letterTheme,
-  phycatDark,
   phycatGreen,
   phycatMint,
   phycatOrange,
   phycatPlusblue,
   phycatPurple,
   phycatRed,
+  tech: techTheme,
+  minimal: minimalTheme,
+  letter: letterTheme,
+  ecommerce: ecommerceTheme,
 }
