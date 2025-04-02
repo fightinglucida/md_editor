@@ -513,9 +513,6 @@ const minimalTheme: Theme = {
       'color': `#0366d6`,
       'text-decoration': `none`,
       'border-bottom': `1px solid rgba(3,102,214,0.2)`,
-      '&:hover': {
-        'border-bottom-color': `currentColor`,
-      },
     },
 
     strong: {
@@ -803,6 +800,10 @@ const letterTheme: Theme = {
       'margin-top': `0.8em`,
       'font-style': `italic`,
     },
+    wx_link: defaultTheme.inline.wx_link,
+    table: defaultTheme.inline.table,
+    thead: defaultTheme.inline.thead,
+    td: defaultTheme.inline.td,
   },
 }
 
@@ -1244,6 +1245,10 @@ const techTheme: Theme = {
     },
   },
   inline: {
+    wx_link: defaultTheme.inline.wx_link,
+    table: defaultTheme.inline.table,
+    thead: defaultTheme.inline.thead,
+    td: defaultTheme.inline.td,
     listitem: {
       'margin': `0.6em 0`,
       'line-height': `1.7`,
@@ -1499,6 +1504,10 @@ const ecommerceTheme: Theme = {
     },
   },
   inline: {
+    wx_link: defaultTheme.inline.wx_link,
+    table: defaultTheme.inline.table,
+    thead: defaultTheme.inline.thead,
+    td: defaultTheme.inline.td,
     listitem: {
       'margin': `0.6em 0`,
       'line-height': `1.7`,
