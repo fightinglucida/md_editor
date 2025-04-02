@@ -2119,6 +2119,15 @@ const pinkTheme: Theme = {
     'font-family': `"Hiragino Sans GB", "Microsoft YaHei", sans-serif`,
   },
   block: {
+    figure: {
+      'display': `flex`,
+      'align-items': `center`,
+      'gap': `0.5rem`,
+      'margin': `1rem 0`,
+      'color': `#5A3E36`,
+      'font-size': `1rem`,
+      'text-align': `justify`,
+    },
     container: {
       'padding': `2rem`,
       'max-width': `680px`,
@@ -2362,6 +2371,722 @@ const pinkTheme: Theme = {
   },
 }
 
+const luxuryTheme: Theme = {
+  base: {
+    '--md-primary-color': `#D4AF37`, // 主色调：金色
+    '--blockquote-background': `rgba(212, 175, 55, 0.08)`, // 引用块背景
+    'text-align': `left`,
+    'line-height': `1.8`,
+    'background': `#111111`, // 纯黑背景
+    'color': `#EEEEEE`, // 浅灰文字
+    'font-family': `"Georgia", "Times New Roman", serif`,
+  },
+  block: {
+    container: {
+      'padding': `2.5rem`,
+      'max-width': `800px`,
+      'margin': `0 auto`,
+      'border': `1px solid rgba(212, 175, 55, 0.3)`,
+    },
+
+    // 标题（烫金效果）
+    h1: {
+      'font-size': `2.2em`,
+      'font-weight': `600`,
+      'margin': `3rem 0 2rem`,
+      'color': `#D4AF37`,
+      'text-align': `center`,
+      'letter-spacing': `0.05em`,
+      'text-shadow': `0 0 10px rgba(212, 175, 55, 0.3)`,
+    },
+    h2: {
+      'font-size': `1.8em`,
+      'font-weight': `500`,
+      'margin': `2.5rem 0 1.8rem`,
+      'color': `#E6C873`,
+      'border-bottom': `1px solid rgba(212, 175, 55, 0.3)`,
+      'padding-bottom': `0.5rem`,
+    },
+    h3: {
+      'font-size': `1.5em`,
+      'font-weight': `500`,
+      'margin': `2.2rem 0 1.5rem`,
+      'color': `#C9B367`,
+      'padding-left': `1rem`,
+      'border-left': `2px solid rgba(212, 175, 55, 0.5)`,
+    },
+    h4: {
+      'font-size': `1.3em`,
+      'font-weight': `500`,
+      'margin': `2rem 0 1.3rem`,
+      'color': `#B3A05D`,
+    },
+    h5: {
+      'font-size': `1.1em`,
+      'font-weight': `500`,
+      'margin': `1.8rem 0 1.1rem`,
+      'color': `#9C8D52`,
+    },
+    h6: {
+      'font-size': `1em`,
+      'font-weight': `500`,
+      'margin': `1.6rem 0 1rem`,
+      'color': `#867A47`,
+    },
+
+    // 段落
+    p: {
+      'margin': `1.2em 0`,
+      'color': `#DDDDDD`,
+      'font-size': `1.05rem`,
+      'letter-spacing': `0.02em`,
+    },
+
+    // 引用块（鎏金边框）
+    blockquote: {
+      'border-left': `3px solid #D4AF37`,
+      'padding': `1.5rem`,
+      'margin': `2rem 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#CCCCCC`,
+      'font-style': `italic`,
+      'position': `relative`,
+    },
+
+    blockquote_p: {
+      margin: `0.8em 0`,
+      color: `inherit`,
+    },
+
+    // 警告块（金属质感）
+    blockquote_note: {
+      'border-left-color': `#5D8BF4`,
+      'background': `rgba(93, 139, 244, 0.08)`,
+    },
+    blockquote_tip: {
+      'border-left-color': `#57C785`,
+      'background': `rgba(87, 199, 133, 0.08)`,
+    },
+    blockquote_warning: {
+      'border-left-color': `#F4B740`,
+      'background': `rgba(244, 183, 64, 0.08)`,
+    },
+    blockquote_caution: {
+      'border-left-color': `#E5534B`,
+      'background': `rgba(229, 83, 75, 0.08)`,
+    },
+
+    blockquote_title: {
+      'display': `flex`,
+      'align-items': `center`,
+      'gap': `0.5em`,
+      'font-weight': `500`,
+      'margin-bottom': `1em`,
+      'color': `#D4AF37`,
+    },
+
+    // 代码块（黑金终端）
+    code_pre: {
+      'background': `#0A0A0A`,
+      'border-radius': `4px`,
+      'padding': `1.5rem`,
+      'overflow-x': `auto`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.95em`,
+      'line-height': `1.6`,
+      'margin': `2rem 0`,
+      'border': `1px solid rgba(212, 175, 55, 0.3)`,
+      'color': `#D4AF37`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `rgba(212, 175, 55, 0.1)`,
+      'padding': `0.3em 0.5em`,
+      'border-radius': `3px`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.9em`,
+      'color': `#D4AF37`,
+      'border': `1px solid rgba(212, 175, 55, 0.3)`,
+    },
+
+    // 图片（金色边框）
+    image: {
+      'display': `block`,
+      'max-width': `100%`,
+      'height': `auto`,
+      'margin': `2rem auto`,
+      'border': `2px solid rgba(212, 175, 55, 0.5)`,
+      'box-shadow': `0 0 20px rgba(212, 175, 55, 0.1)`,
+    },
+
+    // 列表（金色标记）
+    ol: {
+      'padding-left': `2.5em`,
+      'margin': `2rem 0`,
+      'color': `#EEEEEE`,
+      'list-style-type': `none`,
+      'counter-reset': `li`,
+    },
+    ul: {
+      'padding-left': `2.5em`,
+      'margin': `2rem 0`,
+      'color': `#EEEEEE`,
+      'list-style-type': `none`,
+    },
+
+    // 分隔线（金属质感）
+    hr: {
+      border: `none`,
+      height: `1px`,
+      background: `linear-gradient(to right, transparent, rgba(212, 175, 55, 0.5), transparent)`,
+      margin: `3rem 0`,
+    },
+
+    // 脚注（烫金小字）
+    footnotes: {
+      'border-top': `1px solid rgba(212, 175, 55, 0.3)`,
+      'margin-top': `4rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.85em`,
+      'color': `#AAAAAA`,
+    },
+  },
+  inline: {
+    // 表格（高级数据表）
+    table: {
+      'border-collapse': `collapse`,
+      'width': `100%`,
+      'margin': `2.5rem 0`,
+      'border': `1px solid rgba(212, 175, 55, 0.3)`,
+    },
+    thead: {
+      'background': `rgba(212, 175, 55, 0.1)`,
+      'font-weight': `500`,
+      'color': `#D4AF37`,
+    },
+    td: {
+      padding: `1rem`,
+      border: `1px solid rgba(212, 175, 55, 0.2)`,
+      color: `#DDDDDD`,
+    },
+    listitem: {
+      'margin': `0.8em 0`,
+      'line-height': `1.8`,
+      'position': `relative`,
+      'padding-left': `1.5em`,
+    },
+
+    codespan: {
+      'background': `rgba(212, 175, 55, 0.1)`,
+      'padding': `0.3em 0.5em`,
+      'border-radius': `3px`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.9em`,
+      'color': `#D4AF37`,
+      'border': `1px solid rgba(212, 175, 55, 0.3)`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#CCCCCC`,
+    },
+
+    link: {
+      'color': `#D4AF37`,
+      'text-decoration': `none`,
+      'border-bottom': `1px dotted rgba(212, 175, 55, 0.5)`,
+    },
+
+    strong: {
+      'font-weight': `600`,
+      'color': `#D4AF37`,
+      'letter-spacing': `0.03em`,
+    },
+
+    footnote: {
+      'font-size': `0.85em`,
+      'color': `#AAAAAA`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.9em`,
+      'color': `#AAAAAA`,
+      'margin-top': `1rem`,
+      'font-style': `italic`,
+    },
+  },
+}
+
+const kidsTheme: Theme = {
+  base: {
+    '--md-primary-color': `#5E9DD9`, // 主色调：天蓝色
+    '--blockquote-background': `#E8F4FF`, // 引用块背景
+    'text-align': `left`,
+    'line-height': `1.8`,
+    'background': `#FFFFFF`, // 纯白背景
+    'color': `#333333`, // 深灰文字
+    'font-family': `"Ma Shan Zheng", "Comic Sans MS", "Marker Felt", sans-serif`, // 优先使用站酷酷圆
+  },
+  block: {
+    container: {
+      'padding': `1.5rem`,
+      'max-width': `700px`,
+      'margin': `0 auto`,
+      'background': `#FFFFFF`,
+    },
+
+    // 标题（卡通风格）
+    h1: {
+      'font-size': `2em`,
+      'font-weight': `normal`,
+      'margin': `2rem 0 1.5rem`,
+      'color': `#5E9DD9`,
+      'text-align': `center`,
+      'text-decoration': `underline wavy`,
+      'text-decoration-color': `#FFB74D`,
+    },
+    h2: {
+      'font-size': `1.6em`,
+      'font-weight': `normal`,
+      'margin': `1.8rem 0 1.3rem`,
+      'color': `#FF6B00`, // 橙色
+      'border-bottom': `3px dotted #5E9DD9`,
+    },
+    h3: {
+      'font-size': `1.4em`,
+      'font-weight': `normal`,
+      'margin': `1.6rem 0 1.1rem`,
+      'color': `#4CAF50`, // 绿色
+      'padding-left': `0.5rem`,
+      'border-left': `4px solid #FFB74D`,
+    },
+    h4: {
+      'font-size': `1.2em`,
+      'font-weight': `normal`,
+      'margin': `1.4rem 0 1rem`,
+      'color': `#9C27B0`, // 紫色
+    },
+    h5: {
+      'font-size': `1.1em`,
+      'font-weight': `normal`,
+      'margin': `1.2rem 0 0.9rem`,
+      'color': `#FF5722`, // 橙红
+    },
+    h6: {
+      'font-size': `1em`,
+      'font-weight': `normal`,
+      'margin': `1rem 0 0.8rem`,
+      'color': `#009688`, // 青绿
+    },
+
+    // 段落（宽松排版）
+    p: {
+      'margin': `1em 0`,
+      'color': `#333333`,
+      'font-size': `1.1rem`,
+      'line-height': `1.9`,
+    },
+
+    // 引用块（云朵气泡）
+    blockquote: {
+      'border-left': `none`,
+      'padding': `1.2rem 1.8rem`,
+      'margin': `1.8rem 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#333333`,
+      'border-radius': `20px`,
+      'box-shadow': `5px 5px 0 rgba(94,157,217,0.2)`,
+    },
+
+    blockquote_p: {
+      margin: `0.8em 0`,
+      color: `inherit`,
+    },
+
+    // 警告块（彩色标签）
+    blockquote_note: {
+      'background': `#E3F2FD`,
+      'border-left': `4px solid #2196F3`,
+    },
+    blockquote_tip: {
+      'background': `#E8F5E9`,
+      'border-left': `4px solid #4CAF50`,
+    },
+    blockquote_warning: {
+      'background': `#FFF8E1`,
+      'border-left': `4px solid #FFC107`,
+    },
+    blockquote_caution: {
+      'background': `#FFEBEE`,
+      'border-left': `4px solid #F44336`,
+    },
+
+    blockquote_title: {
+      'display': `flex`,
+      'align-items': `center`,
+      'gap': `0.5em`,
+      'font-weight': `bold`,
+      'margin-bottom': `0.8em`,
+      'color': `inherit`,
+    },
+
+    // 代码块（积木风格）
+    code_pre: {
+      'background': `#F5F5F5`,
+      'border-radius': `12px`,
+      'padding': `1.2rem`,
+      'overflow-x': `auto`,
+      'font-family': `"Comic Mono", "Courier New", monospace`,
+      'font-size': `1em`,
+      'line-height': `1.6`,
+      'margin': `1.8rem 0`,
+      'border': `3px solid #5E9DD9`,
+      'color': `#FF6B00`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `#FFF3E0`,
+      'padding': `0.3em 0.5em`,
+      'border-radius': `6px`,
+      'font-family': `"Comic Mono", monospace`,
+      'font-size': `1em`,
+      'color': `#FF6B00`,
+      'border': `2px solid #FFB74D`,
+    },
+
+    // 图片（卡通边框）
+    image: {
+      'display': `block`,
+      'max-width': `90%`,
+      'height': `auto`,
+      'margin': `1.8rem auto`,
+      'border': `4px solid #5E9DD9`,
+      'border-radius': `16px`,
+      'box-shadow': `8px 8px 0 rgba(94,157,217,0.2)`,
+    },
+
+    // 列表（彩色标记）
+    ol: {
+      'padding-left': `2.5em`,
+      'margin': `1.8rem 0`,
+      'color': `#333333`,
+      'list-style-type': `none`,
+      'counter-reset': `li`,
+    },
+    ul: {
+      'padding-left': `2.5em`,
+      'margin': `1.8rem 0`,
+      'color': `#333333`,
+      'list-style-type': `none`,
+    },
+
+    // 表格（乐高风格）
+    table: {
+      'border-collapse': `separate`,
+      'width': `100%`,
+      'margin': `2rem 0`,
+      'border-spacing': `0`,
+      'border-radius': `12px`,
+      'overflow': `hidden`,
+      'box-shadow': `5px 5px 0 rgba(94,157,217,0.2)`,
+    },
+    thead: {
+      'background': `#5E9DD9`,
+      'color': `white`,
+      'font-weight': `bold`,
+    },
+    td: {
+      'padding': `1rem`,
+      'border-bottom': `2px solid #E3F2FD`,
+      'background': `#FFFFFF`,
+    },
+
+    // 分隔线（彩虹虚线）
+    hr: {
+      'border': `none`,
+      'height': `4px`,
+      'background': `repeating-linear-gradient(to right, #5E9DD9, #4CAF50, #FFC107, #FF5722, #9C27B0, #5E9DD9)`,
+      'margin': `3rem 0`,
+      'background-size': `200% 100%`,
+    },
+
+    // 脚注（友好提示）
+    footnotes: {
+      'border-top': `2px dotted #5E9DD9`,
+      'margin-top': `3rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.9em`,
+      'color': `#666666`,
+    },
+  },
+  inline: {
+    listitem: {
+      'margin': `0.8em 0`,
+      'line-height': `1.8`,
+      'position': `relative`,
+      'padding-left': `1.8em`,
+    },
+
+    codespan: {
+      'background': `#FFF3E0`,
+      'padding': `0.3em 0.5em`,
+      'border-radius': `6px`,
+      'font-family': `"Comic Mono", monospace`,
+      'font-size': `1em`,
+      'color': `#FF6B00`,
+      'border': `2px solid #FFB74D`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#5E9DD9`,
+    },
+
+    link: {
+      'color': `#FF6B00`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `#FFB74D`,
+      'text-decoration-style': `wavy`,
+    },
+
+    strong: {
+      'font-weight': `bold`,
+      'color': `#FF5722`,
+    },
+
+    footnote: {
+      'font-size': `0.9em`,
+      'color': `#666666`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `1em`,
+      'color': `#5E9DD9`,
+      'margin-top': `0.8rem`,
+      'font-weight': `bold`,
+    },
+  },
+}
+
+const readingTheme: Theme = {
+  base: {
+    '--md-primary-color': `#4A6FA5`, // 主色调：深蓝色
+    '--blockquote-background': `#F8F9FA`, // 引用块背景
+    'text-align': `left`,
+    'line-height': `1.8`,
+    'background': `#FAFAFA`, // 浅灰背景
+    'color': `#333333`, // 深灰文字
+    'font-family': `"Noto Serif SC", "Source Han Serif", "SimSun", serif`, // 优先使用思源宋体
+  },
+  block: {
+    container: {
+      'padding': `2rem`,
+      'max-width': `680px`, // 适合阅读的宽度
+      'margin': `0 auto`,
+      'background': `#FFFFFF`,
+      'box-shadow': `0 2px 10px rgba(0,0,0,0.05)`,
+    },
+
+    // 标题（学术风格）
+    h1: {
+      'font-size': `1.8em`,
+      'font-weight': `600`,
+      'margin': `3rem 0 1.5rem`,
+      'color': `#2C3E50`,
+      'text-align': `center`,
+      'padding-bottom': `0.8rem`,
+      'border-bottom': `1px solid #E0E0E0`,
+    },
+    h2: {
+      'font-size': `1.5em`,
+      'font-weight': `600`,
+      'margin': `2.5rem 0 1.3rem`,
+      'color': `#2C3E50`,
+      'padding-left': `0.8rem`,
+      'border-left': `3px solid #4A6FA5`,
+    },
+    h3: {
+      'font-size': `1.3em`,
+      'font-weight': `500`,
+      'margin': `2.2rem 0 1.1rem`,
+      'color': `#34495E`,
+    },
+    h4: {
+      'font-size': `1.1em`,
+      'font-weight': `500`,
+      'margin': `2rem 0 1rem`,
+      'color': `#4A6FA5`,
+    },
+    h5: {
+      'font-size': `1em`,
+      'font-weight': `500`,
+      'margin': `1.8rem 0 0.9rem`,
+      'color': `#7F8C8D`,
+    },
+    h6: {
+      'font-size': `0.9em`,
+      'font-weight': `500`,
+      'margin': `1.6rem 0 0.8rem`,
+      'color': `#95A5A6`,
+    },
+
+    // 段落（优化阅读体验）
+    p: {
+      'margin': `1.2em 0`,
+      'color': `#333333`,
+      'font-size': `1.05rem`,
+      'text-align': `justify`,
+      'text-justify': `inter-ideograph`,
+      'hyphens': `auto`,
+      'letter-spacing': `0.02em`,
+    },
+
+    // 引用块（学术引用样式）
+    blockquote: {
+      'border-left': `3px solid #4A6FA5`,
+      'padding': `1.2rem 1.5rem`,
+      'margin': `1.8rem 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#555555`,
+      'font-style': `normal`,
+      'font-size': `0.95em`,
+    },
+
+    blockquote_p: {
+      margin: `0.8em 0`,
+      color: `inherit`,
+    },
+
+    // 代码块（阅读友好型）
+    code_pre: {
+      'background': `#F5F7F9`,
+      'border-radius': `4px`,
+      'padding': `1.3rem`,
+      'overflow-x': `auto`,
+      'font-family': `"Source Code Pro", "Roboto Mono", monospace`,
+      'font-size': `0.95em`,
+      'line-height': `1.6`,
+      'margin': `2rem 0`,
+      'border': `1px solid #E0E0E0`,
+      'color': `#2C3E50`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `#F0F3F6`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `3px`,
+      'font-family': `"Source Code Pro", monospace`,
+      'font-size': `0.9em`,
+      'color': `#4A6FA5`,
+      'border': `1px solid #D6E0E8`,
+    },
+
+    // 图片（简洁风格）
+    image: {
+      'display': `block`,
+      'max-width': `90%`,
+      'height': `auto`,
+      'margin': `2rem auto`,
+      'border-radius': `4px`,
+    },
+
+    // 列表（清晰排版）
+    ol: {
+      'padding-left': `2em`,
+      'margin': `1.8rem 0`,
+      'color': `#333333`,
+    },
+    ul: {
+      'padding-left': `2em`,
+      'margin': `1.8rem 0`,
+      'color': `#333333`,
+    },
+
+    // 表格（数据清晰呈现）
+    table: {
+      'border-collapse': `collapse`,
+      'width': `100%`,
+      'margin': `2rem 0`,
+      'font-size': `0.95em`,
+      'border': `1px solid #E0E0E0`,
+    },
+    thead: {
+      'background': `#F5F7F9`,
+      'font-weight': `600`,
+    },
+    td: {
+      padding: `0.8rem 1rem`,
+      border: `1px solid #E0E0E0`,
+    },
+
+    // 分隔线（非干扰式）
+    hr: {
+      border: `none`,
+      height: `1px`,
+      background: `#E0E0E0`,
+      margin: `3rem 0`,
+    },
+
+    // 脚注（学术规范）
+    footnotes: {
+      'border-top': `1px solid #E0E0E0`,
+      'margin-top': `3.5rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.85em`,
+      'color': `#7F8C8D`,
+    },
+  },
+  inline: {
+    listitem: {
+      'margin': `0.6em 0`,
+      'line-height': `1.8`,
+    },
+
+    codespan: {
+      'background': `#F0F3F6`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `3px`,
+      'font-family': `"Source Code Pro", monospace`,
+      'font-size': `0.9em`,
+      'color': `#4A6FA5`,
+      'border': `1px solid #D6E0E8`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#4A6FA5`,
+    },
+
+    link: {
+      'color': `#4A6FA5`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `rgba(74, 111, 165, 0.3)`,
+    },
+
+    strong: {
+      'font-weight': `600`,
+      'color': `#2C3E50`,
+    },
+
+    footnote: {
+      'font-size': `0.85em`,
+      'color': `#7F8C8D`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.9em`,
+      'color': `#7F8C8D`,
+      'margin-top': `0.8rem`,
+    },
+  },
+}
+
 // 主题与主题色的映射关系
 // 添加新主题时，在这里添加对应的主题色
 export const themeColorMap = {
@@ -2379,6 +3104,9 @@ export const themeColorMap = {
   literary: `#8AA896`, // 文学绿
   news: `#C33C2D`, // 新闻红
   pink: `#FF85A2`, // 粉色
+  luxury: `#D4AF37`, // 高端黑金
+  kids: `#5E9DD9`, // 天蓝色
+  reading: `#4A6FA5`, // 阅读蓝
   // 在这里添加新主题的主题色
   // 格式: 主题名: `颜色代码`, // 颜色描述
 }
@@ -2455,6 +3183,21 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
     value: `pink`,
     desc: `@linxi9948`,
   },
+  {
+    label: `高端黑金`,
+    value: `luxury`,
+    desc: `@linxi9948`,
+  },
+  {
+    label: `卡通主题`,
+    value: `kids`,
+    desc: `@linxi9948`,
+  },
+  {
+    label: `阅读主题`,
+    value: `reading`,
+    desc: `@linxi9948`,
+  },
   // 添加新主题时，在这里添加新的选项
   // {
   //   label: `新主题名称`,
@@ -2479,4 +3222,7 @@ export const themeMap = {
   literary: literaryTheme,
   news: newsTheme,
   pink: pinkTheme,
+  luxury: luxuryTheme,
+  kids: kidsTheme,
+  reading: readingTheme,
 }
