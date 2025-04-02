@@ -15,9 +15,8 @@ function onUpdate(val: boolean) {
 }
 
 const links = [
-  { label: `GitHub 仓库`, url: `https://github.com/doocs/md` },
-  { label: `Gitee 仓库`, url: `https://gitee.com/doocs/md` },
-  { label: `GitCode 仓库`, url: `https://gitcode.com/doocs/md` },
+  { label: `公众号批量采集工具`, url: `https://hiuinilx1w.feishu.cn/docx/IilldFTYLot3nPxsZmBcA9jTnmf?from=from_copylink` },
+  { label: `公众号对标库`, url: `https://www.weixinwriter.com/benchmark` },
 ]
 
 function onRedirect(url: string) {
@@ -32,12 +31,13 @@ function onRedirect(url: string) {
         <DialogTitle>关于</DialogTitle>
       </DialogHeader>
       <div class="text-center">
-        <h3>一款高度简洁的微信 Markdown 编辑器</h3>
-        <p>扫码关注公众号 Doocs，原创技术内容第一时间推送！</p>
+        <h1>微信 Markdown 编辑器</h1>
+        <p />
+        <p>扫码关注林书，获取公众号对标库资源</p>
         <img
           class="mx-auto my-5"
-          src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/1648303220922-7e14aefa-816e-44c1-8604-ade709ca1c69.png"
-          alt="Doocs Markdown 编辑器"
+          src="https://telegraph-image-evj.pages.dev/file/AgACAgUAAyEGAASVtTkdAAMDZ-yyfXgAATWytCcyFNs5I-emMIflAAJ9wDEbsb1oVy0PE8EDhnzFAQADAgADeAADNgQ.png"
+          alt="扫码关注林书，获取公众号对标库资源"
           style="width: 40%"
         >
       </div>
