@@ -2108,6 +2108,260 @@ const newsTheme: Theme = {
   },
 }
 
+const pinkTheme: Theme = {
+  base: {
+    '--md-primary-color': `#FF85A2`, // 主色调：樱花粉
+    '--blockquote-background': `#FFF0F5`, // 引用块背景
+    'text-align': `left`,
+    'line-height': `1.7`,
+    'background': `#FFF9FA`, // 浅粉背景
+    'color': `#5A3E36`, // 深棕文字（保证可读性）
+    'font-family': `"Hiragino Sans GB", "Microsoft YaHei", sans-serif`,
+  },
+  block: {
+    container: {
+      'padding': `2rem`,
+      'max-width': `680px`,
+      'margin': `0 auto`,
+      'background': `#FFFDFD`,
+    },
+
+    // 标题（爱心元素）
+    h1: {
+      'font-size': `1.8em`,
+      'font-weight': `600`,
+      'margin': `2rem 0 1.5rem`,
+      'color': `#FF4F8B`,
+      'text-align': `center`,
+      'position': `relative`,
+    },
+    h2: {
+      'font-size': `1.5em`,
+      'font-weight': `500`,
+      'margin': `1.8rem 0 1.2rem`,
+      'color': `#FF6B9D`,
+      'border-bottom': `2px dotted #FFC0D5`,
+    },
+    h3: {
+      'font-size': `1.3em`,
+      'font-weight': `500`,
+      'margin': `1.6rem 0 1rem`,
+      'color': `#FF85A2`,
+      'padding-left': `0.8rem`,
+      'border-left': `3px solid #FFC0D5`,
+    },
+    h4: {
+      'font-size': `1.1em`,
+      'font-weight': `500`,
+      'margin': `1.4rem 0 0.9rem`,
+      'color': `#FF9EB5`,
+    },
+    h5: {
+      'font-size': `1em`,
+      'font-weight': `500`,
+      'margin': `1.2rem 0 0.8rem`,
+      'color': `#FFB7C8`,
+    },
+    h6: {
+      'font-size': `0.9em`,
+      'font-weight': `500`,
+      'margin': `1rem 0 0.7rem`,
+      'color': `#FFD0DC`,
+    },
+
+    // 段落
+    p: {
+      'margin': `1em 0`,
+      'color': `#5A3E36`,
+      'font-size': `1rem`,
+      'text-align': `justify`,
+    },
+
+    // 引用块（粉色渐变）
+    blockquote: {
+      'border-left': `3px solid #FF85A2`,
+      'padding': `1.2rem 1.5rem`,
+      'margin': `1.5rem 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#7A4E4A`,
+      'border-radius': `0 8px 8px 0`,
+    },
+
+    blockquote_p: {
+      margin: `0.6em 0`,
+      color: `inherit`,
+    },
+
+    // 警告块（糖果色系）
+    blockquote_note: {
+      'border-left-color': `#8BD3F0`,
+      'background': `#F0FAFF`,
+    },
+    blockquote_tip: {
+      'border-left-color': `#A0E6B4`,
+      'background': `#F0FFF4`,
+    },
+    blockquote_warning: {
+      'border-left-color': `#FFD166`,
+      'background': `#FFF9E6`,
+    },
+    blockquote_caution: {
+      'border-left-color': `#FF9B9B`,
+      'background': `#FFF0F0`,
+    },
+
+    blockquote_title: {
+      'display': `flex`,
+      'align-items': `center`,
+      'gap': `0.5em`,
+      'font-weight': `500`,
+      'margin-bottom': `0.6em`,
+    },
+
+    blockquote_important: {},
+    blockquote_title_note: {},
+    blockquote_title_tip: {},
+    blockquote_title_important: {},
+    blockquote_title_warning: {},
+    blockquote_title_caution: {},
+    blockquote_p_note: {},
+    blockquote_p_tip: {},
+    blockquote_p_important: {},
+    blockquote_p_warning: {},
+    blockquote_p_caution: {},
+
+    // 代码块（柔和风格）
+    code_pre: {
+      'background': `#FFF0F5`,
+      'border-radius': `8px`,
+      'padding': `1.2rem`,
+      'overflow-x': `auto`,
+      'font-family': `Consolas, Monaco, monospace`,
+      'font-size': `0.9em`,
+      'line-height': `1.5`,
+      'margin': `1.5rem 0`,
+      'border': `1px solid #FFD0DC`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `#FFF0F5`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `4px`,
+      'font-family': `Consolas, Monaco, monospace`,
+      'font-size': `0.9em`,
+      'color': `#E83E8C`,
+      'border': `1px solid #FFD0DC`,
+    },
+
+    // 图片（糖果包装效果）
+    image: {
+      'display': `block`,
+      'max-width': `90%`,
+      'height': `auto`,
+      'margin': `1.5rem auto`,
+      'border-radius': `12px`,
+      'border': `3px solid #FFD0DC`,
+      'box-shadow': `0 4px 12px rgba(255,143,178,0.2)`,
+    },
+
+    // 列表（爱心项目符号）
+    ol: {
+      'padding-left': `2em`,
+      'margin': `1.5rem 0`,
+      'color': `#5A3E36`,
+    },
+    ul: {
+      'padding-left': `2em`,
+      'margin': `1.5rem 0`,
+      'color': `#5A3E36`,
+      'list-style-type': `none`,
+    },
+
+    // 分隔线（波浪线）
+    hr: {
+      'border': `none`,
+      'height': `6px`,
+      'background': `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='%23FF85A2' d='M0,2 C5,0 5,4 10,2 C15,0 15,4 20,2 '/%3E%3C/svg%3E") repeat-x`,
+      'margin': `2rem 0`,
+      'background-size': `20px 6px`,
+    },
+
+    // 脚注
+    footnotes: {
+      'border-top': `1px dashed #FFC0D5`,
+      'margin-top': `3rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.85em`,
+      'color': `#9A7A75`,
+    },
+  },
+  inline: {
+    // 表格（柔和边框）
+    table: {
+      'border-collapse': `separate`,
+      'width': `100%`,
+      'margin': `1.5rem 0`,
+      'border-spacing': `0`,
+      'border-radius': `8px`,
+      'overflow': `hidden`,
+      'box-shadow': `0 2px 8px rgba(255,143,178,0.1)`,
+    },
+    thead: {
+      'background': `#FFE5EE`,
+      'font-weight': `500`,
+    },
+    td: {
+      'padding': `0.8rem 1rem`,
+      'border-bottom': `1px solid #FFE5EE`,
+    },
+    listitem: {
+      'margin': `0.5em 0`,
+      'line-height': `1.7`,
+      'position': `relative`,
+      'padding-left': `1.2em`,
+    },
+
+    codespan: {
+      'background': `#FFF0F5`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `4px`,
+      'font-family': `Consolas, Monaco, monospace`,
+      'font-size': `0.9em`,
+      'color': `#E83E8C`,
+      'border': `1px solid #FFD0DC`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#7A4E4A`,
+    },
+
+    link: {
+      'color': `#FF6B9D`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `#FFC0D5`,
+    },
+
+    strong: {
+      'font-weight': `600`,
+      'color': `#FF4F8B`,
+    },
+
+    footnote: {
+      'font-size': `0.85em`,
+      'color': `#9A7A75`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.9em`,
+      'color': `#9A7A75`,
+      'margin-top': `0.8rem`,
+    },
+  },
+}
+
 // 主题与主题色的映射关系
 // 添加新主题时，在这里添加对应的主题色
 export const themeColorMap = {
@@ -2124,6 +2378,7 @@ export const themeColorMap = {
   ecommerce: `#FF6B35`, // 电商橙
   literary: `#8AA896`, // 文学绿
   news: `#C33C2D`, // 新闻红
+  pink: `#FF85A2`, // 粉色
   // 在这里添加新主题的主题色
   // 格式: 主题名: `颜色代码`, // 颜色描述
 }
@@ -2195,6 +2450,11 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
     value: `news`,
     desc: `@linxi9948`,
   },
+  {
+    label: `粉色主题`,
+    value: `pink`,
+    desc: `@linxi9948`,
+  },
   // 添加新主题时，在这里添加新的选项
   // {
   //   label: `新主题名称`,
@@ -2218,4 +2478,5 @@ export const themeMap = {
   ecommerce: ecommerceTheme,
   literary: literaryTheme,
   news: newsTheme,
+  pink: pinkTheme,
 }
