@@ -453,6 +453,59 @@ const minimalTheme: Theme = {
     },
 
     // 表格
+    // table: {
+    //   'border-collapse': `collapse`,
+    //   'width': `100%`,
+    //   'margin': `1.5em 0`,
+    //   'font-size': `0.95em`,
+    //   'box-shadow': `0 0 0 1px #e0e0e0`,
+    //   'border-radius': `4px`,
+    //   'overflow': `hidden`,
+    // },
+    // thead: {
+    //   'background': `#f5f5f5`,
+    //   'font-weight': `600`,
+    // },
+    // td: {
+    //   'padding': `0.75em 1em`,
+    //   'border': `1px solid #e0e0e0`,
+    //   'line-height': `1.5`,
+    // },
+
+    // 分隔线
+    hr: {
+      border: `none`,
+      height: `1px`,
+      background: `#e0e0e0`,
+      margin: `2.5em 0`,
+    },
+
+    // 脚注
+    footnotes: {
+      'border-top': `1px solid #e0e0e0`,
+      'margin-top': `3em`,
+      'padding-top': `1em`,
+      'font-size': `0.85em`,
+      'color': `#666`,
+    },
+    figure: {
+      margin: `1.5em 8px`,
+      color: `hsl(var(--foreground))`,
+    },
+    blockquote_important: {},
+    blockquote_title_note: {},
+    blockquote_title_tip: {},
+    blockquote_title_important: {},
+    blockquote_title_warning: {},
+    blockquote_title_caution: {},
+    blockquote_p_note: {},
+    blockquote_p_tip: {},
+    blockquote_p_important: {},
+    blockquote_p_warning: {},
+    blockquote_p_caution: {},
+  },
+  inline: {
+    wx_link: defaultTheme.inline.wx_link,
     table: {
       'border-collapse': `collapse`,
       'width': `100%`,
@@ -471,25 +524,6 @@ const minimalTheme: Theme = {
       'border': `1px solid #e0e0e0`,
       'line-height': `1.5`,
     },
-
-    // 分隔线
-    hr: {
-      border: `none`,
-      height: `1px`,
-      background: `#e0e0e0`,
-      margin: `2.5em 0`,
-    },
-
-    // 脚注
-    footnotes: {
-      'border-top': `1px solid #e0e0e0`,
-      'margin-top': `3em`,
-      'padding-top': `1em`,
-      'font-size': `0.85em`,
-      'color': `#666`,
-    },
-  },
-  inline: {
     listitem: {
       'margin': `0.5em 0`,
       'line-height': `1.6`,
@@ -529,281 +563,6 @@ const minimalTheme: Theme = {
       'text-align': `center`,
       'font-size': `0.8em`,
     },
-  },
-}
-
-const letterTheme: Theme = {
-  base: {
-    '--md-primary-color': `#8B6B61`, // 主色调为复古棕色
-    '--blockquote-background': `#FFF9F0`,
-    'text-align': `left`,
-    'line-height': `1.8`,
-    'background': `#FFF9F0`, // 信纸底色
-    'font-family': `"Georgia", "Times New Roman", serif`,
-    'color': `#5D4037`, // 主要文字颜色
-  },
-  block: {
-    container: {
-      'background-image': `linear-gradient(to bottom, #FFF9F0 95%, #F0E6D2 100%)`,
-      'padding': `3rem 2.5rem`,
-      'border': `1px solid #E0D6C3`,
-      'max-width': `700px`,
-      'margin': `2rem auto`,
-      'box-shadow': `0 0 15px rgba(0,0,0,0.05)`,
-    },
-
-    // 标题（已优化视觉层次）
-    h1: {
-      'font-size': `1.8em`,
-      'font-weight': `normal`,
-      'margin': `2.5rem 0 1.8rem`,
-      'color': `#5D4037`,
-      'border-bottom': `1px dashed #D7CCC8`,
-      'font-style': `italic`,
-      'text-align': `center`,
-      'letter-spacing': `0.05em`,
-    },
-    h2: {
-      'font-size': `1.5em`,
-      'font-weight': `normal`,
-      'margin': `2.2rem 0 1.5rem`,
-      'color': `#6D4C41`,
-      'text-decoration': `underline`,
-      'text-decoration-color': `#D7CCC8`,
-      'text-decoration-thickness': `1px`,
-      'text-underline-offset': `0.3em`,
-    },
-    h3: {
-      'font-size': `1.3em`,
-      'font-weight': `normal`,
-      'margin': `2rem 0 1.3rem`,
-      'color': `#8D6E63`,
-      'letter-spacing': `0.05em`,
-      'border-left': `3px solid #D7CCC8`,
-      'padding-left': `0.8em`,
-    },
-    h4: {
-      'font-size': `1.1em`,
-      'font-weight': `normal`,
-      'margin': `1.8rem 0 1.1rem`,
-      'color': `#A1887F`,
-      'font-variant': `small-caps`,
-    },
-    h5: {
-      'font-size': `1em`,
-      'font-style': `italic`,
-      'margin': `1.6rem 0 1rem`,
-      'color': `#BCAAA4`,
-    },
-    h6: {
-      'font-size': `0.9em`,
-      'font-style': `italic`,
-      'margin': `1.4rem 0 0.9rem`,
-      'color': `#D7CCC8`,
-      'text-decoration': `underline dotted`,
-    },
-
-    // 段落
-    p: {
-      'margin': `1.2em 0`,
-      'color': `#5D4037`,
-      'font-size': `1.05rem`,
-      'text-align': `justify`,
-      'text-justify': `inter-character`,
-      'hyphens': `auto`,
-    },
-
-    // 引用块
-    blockquote: {
-      'border-left': `3px solid #D7CCC8`,
-      'padding': `1.2em 1.8em`,
-      'margin': `1.8em 0`,
-      'background': `var(--blockquote-background)`,
-      'color': `#6D4C41`,
-      'font-style': `normal`,
-      'position': `relative`,
-    },
-
-    blockquote_p: {
-      'margin': `0.8em 0`,
-      'color': `inherit`,
-      'text-indent': `1em`,
-    },
-
-    // 警告块（调整为复古风格）
-    blockquote_note: {
-      'border-left-color': `#7C9EB2`,
-      'background': `#F0F7F9`,
-    },
-    blockquote_tip: {
-      'border-left-color': `#8BA88E`,
-      'background': `#F2F7F0`,
-    },
-    blockquote_warning: {
-      'border-left-color': `#D4A373`,
-      'background': `#FBF3EC`,
-    },
-    blockquote_caution: {
-      'border-left-color': `#C88D8D`,
-      'background': `#FBEFEF`,
-    },
-
-    blockquote_title: {
-      'display': `flex`,
-      'align-items': `center`,
-      'gap': `0.5em`,
-      'font-weight': `600`,
-      'margin-bottom': `0.8em`,
-      'font-variant': `small-caps`,
-      'letter-spacing': `0.1em`,
-    },
-
-    // 代码块（调整为复古打字机风格）
-    code_pre: {
-      'background': `#F5F0E6`,
-      'border-radius': `3px`,
-      'padding': `1.2em 1.5em`,
-      'overflow-x': `auto`,
-      'font-family': `"Courier New", Courier, monospace`,
-      'font-size': `0.95em`,
-      'line-height': `1.5`,
-      'margin': `1.8em 0`,
-      'border': `1px solid #E0D6C3`,
-      'box-shadow': `inset 0 0 3px rgba(0,0,0,0.1)`,
-      'color': `#5D4037`,
-    },
-
-    // 行内代码
-    code: {
-      'background': `#F5F0E6`,
-      'padding': `0.2em 0.4em`,
-      'border-radius': `2px`,
-      'font-family': `"Courier New", Courier, monospace`,
-      'font-size': `0.9em`,
-      'color': `#8B6B61`,
-      'border': `1px solid #E0D6C3`,
-    },
-
-    // 图片（添加信纸质感边框）
-    image: {
-      'display': `block`,
-      'max-width': `90%`,
-      'height': `auto`,
-      'margin': `2em auto`,
-      'border': `1px solid #E0D6C3`,
-      'padding': `8px`,
-      'background': `white`,
-      'box-shadow': `0 2px 8px rgba(0,0,0,0.05)`,
-      'position': `relative`,
-    },
-
-    // 列表（使用复古项目符号）
-    ol: {
-      'padding-left': `1.8em`,
-      'margin': `1.8em 0`,
-      'color': `#5D4037`,
-      'list-style-type': `decimal`,
-    },
-    ul: {
-      'padding-left': `1.8em`,
-      'margin': `1.8em 0`,
-      'color': `#5D4037`,
-      'list-style-type': `disc`,
-    },
-
-    // 表格（信纸风格）
-    table: {
-      'border-collapse': `separate`,
-      'width': `100%`,
-      'margin': `2em 0`,
-      'font-size': `0.95em`,
-      'border-spacing': `0`,
-      'border': `1px solid #E0D6C3`,
-      'border-radius': `4px`,
-      'overflow': `hidden`,
-      'box-shadow': `0 1px 3px rgba(0,0,0,0.05)`,
-    },
-    thead: {
-      'background': `#F5F0E6`,
-      'font-weight': `600`,
-      'border-bottom': `1px solid #E0D6C3`,
-    },
-    td: {
-      'padding': `0.8em 1.2em`,
-      'border-bottom': `1px solid #E0D6C3`,
-      'border-right': `1px solid #E0D6C3`,
-    },
-
-    // 分隔线（手绘风格）
-    hr: {
-      border: `none`,
-      height: `1px`,
-      background: `linear-gradient(to right, transparent 0%, #D7CCC8 50%, transparent 100%)`,
-      margin: `3em 0`,
-      position: `relative`,
-    },
-
-    // 脚注（信纸底部风格）
-    footnotes: {
-      'border-top': `1px dashed #D7CCC8`,
-      'margin-top': `3.5em`,
-      'padding-top': `1.5em`,
-      'font-size': `0.85em`,
-      'color': `#8D6E63`,
-    },
-  },
-  inline: {
-    listitem: {
-      'margin': `0.6em 0`,
-      'line-height': `1.7`,
-      'text-indent': `-0.5em`,
-    },
-
-    codespan: {
-      'background': `#F5F0E6`,
-      'padding': `0.2em 0.4em`,
-      'border-radius': `2px`,
-      'font-family': `"Courier New", Courier, monospace`,
-      'font-size': `0.9em`,
-      'color': `#8B6B61`,
-      'border': `1px solid #E0D6C3`,
-    },
-
-    em: {
-      'font-style': `italic`,
-      'color': `#6D4C41`,
-    },
-
-    link: {
-      'color': `#7C9EB2`,
-      'text-decoration': `underline`,
-      'text-decoration-color': `#D7CCC8`,
-      'text-underline-offset': `0.2em`,
-    },
-
-    strong: {
-      'font-weight': `600`,
-      'color': `#5D4037`,
-      'letter-spacing': `0.02em`,
-    },
-
-    footnote: {
-      'font-size': `0.85em`,
-      'color': `#8D6E63`,
-      'vertical-align': `super`,
-    },
-
-    figcaption: {
-      'text-align': `center`,
-      'font-size': `0.9em`,
-      'color': `#A1887F`,
-      'margin-top': `0.8em`,
-      'font-style': `italic`,
-    },
-    wx_link: defaultTheme.inline.wx_link,
-    table: defaultTheme.inline.table,
-    thead: defaultTheme.inline.thead,
-    td: defaultTheme.inline.td,
   },
 }
 
@@ -1206,7 +965,41 @@ const techTheme: Theme = {
       'list-style-type': `none`,
     },
 
-    // 表格（数据表风格）
+    // 分隔线（科技感发光效果）
+    hr: {
+      'border': `none`,
+      'height': `1px`,
+      'background': `linear-gradient(to right, transparent, rgba(33,150,243,0.5), transparent)`,
+      'margin': `3rem 0`,
+      'box-shadow': `0 0 8px rgba(33,150,243,0.3)`,
+    },
+
+    // 脚注
+    footnotes: {
+      'border-top': `1px solid rgba(33,150,243,0.3)`,
+      'margin-top': `3.5rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.85em`,
+      'color': `#8892B0`,
+    },
+    figure: {
+      margin: `1.5em 8px`,
+      color: `hsl(var(--foreground))`,
+    },
+    blockquote_important: {},
+    blockquote_title_note: {},
+    blockquote_title_tip: {},
+    blockquote_title_important: {},
+    blockquote_title_warning: {},
+    blockquote_title_caution: {},
+    blockquote_p_note: {},
+    blockquote_p_tip: {},
+    blockquote_p_important: {},
+    blockquote_p_warning: {},
+    blockquote_p_caution: {},
+  },
+  inline: {
+    wx_link: defaultTheme.inline.wx_link,
     table: {
       'border-collapse': `collapse`,
       'width': `100%`,
@@ -1225,30 +1018,6 @@ const techTheme: Theme = {
       border: `1px solid rgba(33,150,243,0.2)`,
       color: `#E6F1FF`,
     },
-
-    // 分隔线（科技感发光效果）
-    hr: {
-      'border': `none`,
-      'height': `1px`,
-      'background': `linear-gradient(to right, transparent, rgba(33,150,243,0.5), transparent)`,
-      'margin': `3rem 0`,
-      'box-shadow': `0 0 8px rgba(33,150,243,0.3)`,
-    },
-
-    // 脚注
-    footnotes: {
-      'border-top': `1px solid rgba(33,150,243,0.3)`,
-      'margin-top': `3.5rem`,
-      'padding-top': `1.5rem`,
-      'font-size': `0.85em`,
-      'color': `#8892B0`,
-    },
-  },
-  inline: {
-    wx_link: defaultTheme.inline.wx_link,
-    table: defaultTheme.inline.table,
-    thead: defaultTheme.inline.thead,
-    td: defaultTheme.inline.td,
     listitem: {
       'margin': `0.6em 0`,
       'line-height': `1.7`,
@@ -1292,6 +1061,293 @@ const techTheme: Theme = {
       'font-size': `0.9em`,
       'color': `#8892B0`,
       'margin-top': `0.8rem`,
+    },
+  },
+}
+
+const letterTheme: Theme = {
+  base: {
+    '--md-primary-color': `#8B6B61`, // 主色调为复古棕色
+    '--blockquote-background': `#FFF9F0`,
+    'text-align': `left`,
+    'line-height': `1.8`,
+    'background': `#FFF9F0`, // 信纸底色
+    'font-family': `"Georgia", "Times New Roman", serif`,
+    'color': `#5D4037`, // 主要文字颜色
+  },
+  block: {
+    container: {
+      'background-image': `linear-gradient(to bottom, #FFF9F0 95%, #F0E6D2 100%)`,
+      'padding': `3rem 2.5rem`,
+      'border': `1px solid #E0D6C3`,
+      'max-width': `700px`,
+      'margin': `2rem auto`,
+      'box-shadow': `0 0 15px rgba(0,0,0,0.05)`,
+    },
+
+    // 标题（已优化视觉层次）
+    h1: {
+      'font-size': `1.8em`,
+      'font-weight': `normal`,
+      'margin': `2.5rem 0 1.8rem`,
+      'color': `#5D4037`,
+      'border-bottom': `1px dashed #D7CCC8`,
+      'font-style': `italic`,
+      'text-align': `center`,
+      'letter-spacing': `0.05em`,
+    },
+    h2: {
+      'font-size': `1.5em`,
+      'font-weight': `normal`,
+      'margin': `2.2rem 0 1.5rem`,
+      'color': `#6D4C41`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `#D7CCC8`,
+      'text-decoration-thickness': `1px`,
+      'text-underline-offset': `0.3em`,
+    },
+    h3: {
+      'font-size': `1.3em`,
+      'font-weight': `normal`,
+      'margin': `2rem 0 1.3rem`,
+      'color': `#8D6E63`,
+      'letter-spacing': `0.05em`,
+      'border-left': `3px solid #D7CCC8`,
+      'padding-left': `0.8em`,
+    },
+    h4: {
+      'font-size': `1.1em`,
+      'font-weight': `normal`,
+      'margin': `1.8rem 0 1.1rem`,
+      'color': `#A1887F`,
+      'font-variant': `small-caps`,
+    },
+    h5: {
+      'font-size': `1em`,
+      'font-style': `italic`,
+      'margin': `1.6rem 0 1rem`,
+      'color': `#BCAAA4`,
+    },
+    h6: {
+      'font-size': `0.9em`,
+      'font-style': `italic`,
+      'margin': `1.4rem 0 0.9rem`,
+      'color': `#D7CCC8`,
+      'text-decoration': `underline dotted`,
+    },
+
+    // 段落
+    p: {
+      'margin': `1.2em 0`,
+      'color': `#5D4037`,
+      'font-size': `1.05rem`,
+      'text-align': `justify`,
+      'text-justify': `inter-character`,
+      'hyphens': `auto`,
+    },
+
+    // 引用块
+    blockquote: {
+      'border-left': `3px solid #D7CCC8`,
+      'padding': `1.2em 1.8em`,
+      'margin': `1.8em 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#6D4C41`,
+      'font-style': `normal`,
+      'position': `relative`,
+    },
+
+    blockquote_p: {
+      'margin': `0.8em 0`,
+      'color': `inherit`,
+      'text-indent': `1em`,
+    },
+
+    // 警告块（调整为复古风格）
+    blockquote_note: {
+      'border-left-color': `#7C9EB2`,
+      'background': `#F0F7F9`,
+    },
+    blockquote_tip: {
+      'border-left-color': `#8BA88E`,
+      'background': `#F2F7F0`,
+    },
+    blockquote_warning: {
+      'border-left-color': `#D4A373`,
+      'background': `#FBF3EC`,
+    },
+    blockquote_caution: {
+      'border-left-color': `#C88D8D`,
+      'background': `#FBEFEF`,
+    },
+
+    blockquote_title: {
+      'display': `flex`,
+      'align-items': `center`,
+      'gap': `0.5em`,
+      'font-weight': `600`,
+      'margin-bottom': `0.8em`,
+      'font-variant': `small-caps`,
+      'letter-spacing': `0.1em`,
+    },
+
+    blockquote_important: {},
+    blockquote_title_note: {},
+    blockquote_title_tip: {},
+    blockquote_title_important: {},
+    blockquote_title_warning: {},
+    blockquote_title_caution: {},
+    blockquote_p_note: {},
+    blockquote_p_tip: {},
+    blockquote_p_important: {},
+    blockquote_p_warning: {},
+    blockquote_p_caution: {},
+
+    // 代码块（调整为复古打字机风格）
+    code_pre: {
+      'background': `#F5F0E6`,
+      'border-radius': `3px`,
+      'padding': `1.2em 1.5em`,
+      'overflow-x': `auto`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.95em`,
+      'line-height': `1.5`,
+      'margin': `1.8em 0`,
+      'border': `1px solid #E0D6C3`,
+      'box-shadow': `inset 0 0 3px rgba(0,0,0,0.1)`,
+      'color': `#5D4037`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `#F5F0E6`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `2px`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.9em`,
+      'color': `#8B6B61`,
+      'border': `1px solid #E0D6C3`,
+    },
+
+    // 图片（添加信纸质感边框）
+    image: {
+      'display': `block`,
+      'max-width': `90%`,
+      'height': `auto`,
+      'margin': `2em auto`,
+      'border': `1px solid #E0D6C3`,
+      'padding': `8px`,
+      'background': `white`,
+      'box-shadow': `0 2px 8px rgba(0,0,0,0.05)`,
+      'position': `relative`,
+    },
+
+    // 列表（使用复古项目符号）
+    ol: {
+      'padding-left': `1.8em`,
+      'margin': `1.8em 0`,
+      'color': `#5D4037`,
+      'list-style-type': `decimal`,
+    },
+    ul: {
+      'padding-left': `1.8em`,
+      'margin': `1.8em 0`,
+      'color': `#5D4037`,
+      'list-style-type': `disc`,
+    },
+
+    // 分隔线（手绘风格）
+    hr: {
+      border: `none`,
+      height: `1px`,
+      background: `linear-gradient(to right, transparent 0%, #D7CCC8 50%, transparent 100%)`,
+      margin: `3em 0`,
+      position: `relative`,
+    },
+
+    // 脚注（信纸底部风格）
+    footnotes: {
+      'border-top': `1px dashed #D7CCC8`,
+      'margin-top': `3.5em`,
+      'padding-top': `1.5em`,
+      'font-size': `0.85em`,
+      'color': `#8D6E63`,
+    },
+
+    figure: {
+      margin: `1.5em 8px`,
+      color: `hsl(var(--foreground))`,
+    },
+  },
+  inline: {
+    wx_link: defaultTheme.inline.wx_link,
+    table: {
+      'border-collapse': `separate`,
+      'width': `100%`,
+      'margin': `2em 0`,
+      'font-size': `0.95em`,
+      'border-spacing': `0`,
+      'border': `1px solid #E0D6C3`,
+      'border-radius': `4px`,
+      'overflow': `hidden`,
+      'box-shadow': `0 1px 3px rgba(0,0,0,0.05)`,
+    },
+    thead: {
+      'background': `#F5F0E6`,
+      'font-weight': `600`,
+      'border-bottom': `1px solid #E0D6C3`,
+    },
+    td: {
+      'padding': `0.8em 1.2em`,
+      'border-bottom': `1px solid #E0D6C3`,
+      'border-right': `1px solid #E0D6C3`,
+    },
+    listitem: {
+      'margin': `0.6em 0`,
+      'line-height': `1.7`,
+      'text-indent': `-0.5em`,
+    },
+
+    codespan: {
+      'background': `#F5F0E6`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `2px`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.9em`,
+      'color': `#8B6B61`,
+      'border': `1px solid #E0D6C3`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#6D4C41`,
+    },
+
+    link: {
+      'color': `#7C9EB2`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `#D7CCC8`,
+      'text-underline-offset': `0.2em`,
+    },
+
+    strong: {
+      'font-weight': `600`,
+      'color': `#5D4037`,
+      'letter-spacing': `0.02em`,
+    },
+
+    footnote: {
+      'font-size': `0.85em`,
+      'color': `#8D6E63`,
+      'vertical-align': `super`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.9em`,
+      'color': `#A1887F`,
+      'margin-top': `0.8em`,
+      'font-style': `italic`,
     },
   },
 }
@@ -1463,7 +1519,41 @@ const ecommerceTheme: Theme = {
       'list-style-type': `none`,
     },
 
-    // 表格（数据对比风格）
+    // 分隔线（促销风格）
+    hr: {
+      'border': `none`,
+      'height': `4px`,
+      'background': `linear-gradient(to right, #FF6B35, #FF8C42, #FFD3A0, #FF8C42, #FF6B35)`,
+      'margin': `3rem 0`,
+      'border-radius': `2px`,
+    },
+
+    // 脚注
+    footnotes: {
+      'border-top': `1px solid #EEEEEE`,
+      'margin-top': `3.5rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.85em`,
+      'color': `#888888`,
+    },
+    figure: {
+      margin: `1.5em 8px`,
+      color: `hsl(var(--foreground))`,
+    },
+    blockquote_important: {},
+    blockquote_title_note: {},
+    blockquote_title_tip: {},
+    blockquote_title_important: {},
+    blockquote_title_warning: {},
+    blockquote_title_caution: {},
+    blockquote_p_note: {},
+    blockquote_p_tip: {},
+    blockquote_p_important: {},
+    blockquote_p_warning: {},
+    blockquote_p_caution: {},
+  },
+  inline: {
+    wx_link: defaultTheme.inline.wx_link,
     table: {
       'border-collapse': `separate`,
       'width': `100%`,
@@ -1484,30 +1574,6 @@ const ecommerceTheme: Theme = {
       'border-bottom': `1px solid #EEEEEE`,
       'color': `#555555`,
     },
-
-    // 分隔线（促销风格）
-    hr: {
-      'border': `none`,
-      'height': `4px`,
-      'background': `linear-gradient(to right, #FF6B35, #FF8C42, #FFD3A0, #FF8C42, #FF6B35)`,
-      'margin': `3rem 0`,
-      'border-radius': `2px`,
-    },
-
-    // 脚注
-    footnotes: {
-      'border-top': `1px solid #EEEEEE`,
-      'margin-top': `3.5rem`,
-      'padding-top': `1.5rem`,
-      'font-size': `0.85em`,
-      'color': `#888888`,
-    },
-  },
-  inline: {
-    wx_link: defaultTheme.inline.wx_link,
-    table: defaultTheme.inline.table,
-    thead: defaultTheme.inline.thead,
-    td: defaultTheme.inline.td,
     listitem: {
       'margin': `0.6em 0`,
       'line-height': `1.7`,
