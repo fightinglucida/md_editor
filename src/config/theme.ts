@@ -1771,21 +1771,21 @@ const literaryTheme: Theme = {
     },
 
     // 表格（极简边框）
-    table: {
-      'border-collapse': `collapse`,
-      'width': `100%`,
-      'margin': `2.5rem 0`,
-      'font-size': `0.95em`,
-      'border': `1px solid #D4C8B8`,
-    },
-    thead: {
-      'background': `#F1EDE5`,
-      'font-weight': `400`,
-    },
-    td: {
-      padding: `0.8rem 1.2rem`,
-      border: `1px solid #D4C8B8`,
-    },
+    // table: {
+    //   'border-collapse': `collapse`,
+    //   'width': `100%`,
+    //   'margin': `2.5rem 0`,
+    //   'font-size': `0.95em`,
+    //   'border': `1px solid #D4C8B8`,
+    // },
+    // thead: {
+    //   'background': `#F1EDE5`,
+    //   'font-weight': `400`,
+    // },
+    // td: {
+    //   padding: `0.8rem 1.2rem`,
+    //   border: `1px solid #D4C8B8`,
+    // },
 
     // 分隔线（手绘虚线）
     hr: {
@@ -1806,6 +1806,9 @@ const literaryTheme: Theme = {
   },
   inline: {
     wx_link: defaultTheme.inline.wx_link,
+    table: defaultTheme.inline.table,
+    thead: defaultTheme.inline.thead,
+    td: defaultTheme.inline.td,
     listitem: {
       'margin': `0.8em 0`,
       'line-height': `1.8`,
@@ -1923,7 +1926,7 @@ const newsTheme: Theme = {
       'color': `#222222`,
       'font-size': `1rem`,
       'text-align': `justify`,
-      'text-justify': `inter-ideograph`, // 优化中文对齐
+      'text-justify': `inter-character`, // 优化中文对齐
     },
 
     // 引用块（新闻摘录样式）
@@ -2048,9 +2051,6 @@ const newsTheme: Theme = {
       'color': `#1A73E8`, // 蓝色链接更符合新闻习惯
       'text-decoration': `none`,
       'border-bottom': `1px solid rgba(26,115,232,0.3)`,
-      '&:hover': {
-        'border-bottom-color': `currentColor`,
-      },
     },
 
     strong: {
