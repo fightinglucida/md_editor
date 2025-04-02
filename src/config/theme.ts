@@ -2040,6 +2040,8 @@ const newsTheme: Theme = {
       'font-size': `0.85em`,
       'color': `#666666`,
     },
+    figure: {},
+    blockquote_title: {},
     blockquote_note: {},
     blockquote_tip: {},
     blockquote_important: {},
