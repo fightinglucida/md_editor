@@ -2485,26 +2485,17 @@ const luxuryTheme: Theme = {
       'margin-bottom': `1em`,
       'color': `#D4AF37`,
     },
-    blockquote_important: {
-      'border-left-color': `#E5534B`,
-      'background': `rgba(229, 83, 75, 0.08)`,
-    },
-    blockquote_title_note: {
-      'border-left-color': `#5D8BF4`,
-      'background': `rgba(93, 139, 244, 0.08)`,
-    },
-    blockquote_title_tip: {
-      'border-left-color': `#57C785`,
-      'background': `rgba(87, 199, 133, 0.08)`,
-    },
-    blockquote_title_warning: {
-      'border-left-color': `#F4B740`,
-      'background': `rgba(244, 183, 64, 0.08)`,
-    },
-    blockquote_title_caution: {
-      'border-left-color': `#E5534B`,
-      'background': `rgba(229, 83, 75, 0.08)`,
-    },
+    blockquote_important: {},
+    blockquote_title_note: {},
+    blockquote_title_tip: {},
+    blockquote_title_important: {},
+    blockquote_title_warning: {},
+    blockquote_title_caution: {},
+    blockquote_p_note: {},
+    blockquote_p_tip: {},
+    blockquote_p_important: {},
+    blockquote_p_warning: {},
+    blockquote_p_caution: {},
 
     // 代码块（黑金终端）
     code_pre: {
@@ -2753,6 +2744,17 @@ const kidsTheme: Theme = {
       'margin-bottom': `0.8em`,
       'color': `inherit`,
     },
+    blockquote_important: {},
+    blockquote_title_note: {},
+    blockquote_title_tip: {},
+    blockquote_title_important: {},
+    blockquote_title_warning: {},
+    blockquote_title_caution: {},
+    blockquote_p_note: {},
+    blockquote_p_tip: {},
+    blockquote_p_important: {},
+    blockquote_p_warning: {},
+    blockquote_p_caution: {},
 
     // 代码块（积木风格）
     code_pre: {
@@ -2982,6 +2984,17 @@ const readingTheme: Theme = {
       margin: `0.8em 0`,
       color: `inherit`,
     },
+    blockquote_important: {},
+    blockquote_title_note: {},
+    blockquote_title_tip: {},
+    blockquote_title_important: {},
+    blockquote_title_warning: {},
+    blockquote_title_caution: {},
+    blockquote_p_note: {},
+    blockquote_p_tip: {},
+    blockquote_p_important: {},
+    blockquote_p_warning: {},
+    blockquote_p_caution: {},
 
     // 代码块（阅读友好型）
     code_pre: {
