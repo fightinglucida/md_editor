@@ -87,7 +87,6 @@ const defaultTheme: Theme = {
       'margin-bottom': `1em`,
     },
 
-    // 引用内容
     blockquote_p: {
       'display': `block`,
       'font-size': `1em`,
@@ -432,150 +431,6 @@ const graceTheme = toMerged(defaultTheme, {
   },
 })
 
-// 简洁主题
-const simpleTheme = toMerged(defaultTheme, {
-  base: {
-  },
-  block: {
-    container: {},
-    h1: {
-      'padding': `0.5em 1em`,
-      'font-size': `1.4em`,
-      'text-shadow': `1px 1px 3px rgba(0,0,0,0.05)`,
-    },
-
-    h2: {
-      'padding': `0.3em 1.2em`,
-      'font-size': `1.3em`,
-      'border-radius': `8px 24px 8px 24px`,
-      'box-shadow': `0 2px 6px rgba(0,0,0,0.06)`,
-    },
-
-    h3: {
-      'padding-left': `12px`,
-      'font-size': `1.2em`,
-      'border-radius': `6px`,
-      'line-height': `2.4em`,
-      'border-left': `4px solid var(--md-primary-color)`,
-      'border-right': `1px solid color-mix(in srgb, var(--md-primary-color) 10%, transparent)`,
-      'border-bottom': `1px solid color-mix(in srgb, var(--md-primary-color) 10%, transparent)`,
-      'border-top': `1px solid color-mix(in srgb, var(--md-primary-color) 10%, transparent)`,
-      'background': `color-mix(in srgb, var(--md-primary-color) 8%, transparent)`,
-    },
-
-    h4: {
-      'font-size': `1.1em`,
-      'border-radius': `6px`,
-    },
-
-    h5: {
-      'border-radius': `6px`,
-    },
-
-    h6: {
-      'border-radius': `6px`,
-    },
-
-    blockquote: {
-      'font-style': `italic`,
-      'padding': `1em 1em 1em 2em`,
-      'color': `rgba(0,0,0,0.6)`,
-      'border-bottom': `0.2px solid rgba(0, 0, 0, 0.04)`,
-      'border-top': `0.2px solid rgba(0, 0, 0, 0.04)`,
-      'border-right': `0.2px solid rgba(0, 0, 0, 0.04)`,
-    },
-
-    blockquote_note: {
-      'font-style': `italic`,
-    },
-
-    blockquote_tip: {
-      'font-style': `italic`,
-    },
-
-    blockquote_important: {
-      'font-style': `italic`,
-    },
-
-    blockquote_warning: {
-      'font-style': `italic`,
-    },
-
-    blockquote_caution: {
-      'font-style': `italic`,
-    },
-
-    blockquote_title: {
-    },
-
-    blockquote_title_note: {
-
-    },
-
-    blockquote_title_tip: {
-    },
-
-    blockquote_title_important: {
-    },
-
-    blockquote_title_warning: {
-    },
-
-    blockquote_title_caution: {
-    },
-
-    blockquote_p_note: {
-    },
-
-    blockquote_p_tip: {
-    },
-
-    blockquote_p_important: {
-    },
-
-    blockquote_p_warning: {
-    },
-
-    blockquote_p_caution: {
-    },
-
-    code_pre: {
-      border: `1px solid rgba(0, 0, 0, 0.04)`,
-    },
-
-    code: {
-      'white-space': `pre-wrap`,
-      'font-family': `'Fira Code', Menlo, Operator Mono, Consolas, Monaco, monospace`,
-    },
-
-    image: {
-      'border-radius': `8px`,
-      'border': `1px solid rgba(0, 0, 0, 0.04)`,
-    },
-
-    ol: {
-      'padding-left': `1.5em`,
-    },
-
-    ul: {
-      'list-style': `none`,
-      'padding-left': `1.5em`,
-    },
-
-    hr: {
-      height: `1px`,
-      border: `none`,
-      margin: `2em 0`,
-      background: `linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.1), rgba(0,0,0,0))`,
-    },
-  },
-  inline: {
-    listitem: {
-      margin: `0.5em 8px`,
-    },
-  },
-})
-
 // 添加7个新主题
 // ===== 主题定义开始 =====
 // 创建新主题的步骤：
@@ -586,6 +441,515 @@ const simpleTheme = toMerged(defaultTheme, {
 // 5. 在themeMap中注册新主题
 // 6. 在themeColorMap中添加主题色
 // 7. 在themeOptions中添加主题选项
+
+const minimalTheme: Theme = {
+  base: {
+    '--md-primary-color': `#333333`,
+    '--blockquote-background': `#f8f8f8`,
+    'text-align': `left`,
+    'line-height': `1.75`,
+    'background': `#ffffff`,
+    'font-family': `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
+  },
+  block: {
+    container: {
+      'box-shadow': `0 2px 10px rgba(0,0,0,0.05)`,
+      'padding': `2rem`,
+      'max-width': `800px`,
+      'margin': `0 auto`,
+    },
+
+    // 标题
+    h1: {
+      'font-size': `2em`,
+      'font-weight': `700`,
+      'margin': `2rem 0 1.5rem`,
+      'color': `#111`,
+      'border-bottom': `2px solid #eee`,
+      'padding-bottom': `0.5rem`,
+    },
+    h2: {
+      'font-size': `1.6em`,
+      'font-weight': `600`,
+      'margin': `1.8rem 0 1.2rem`,
+      'color': `#333`,
+      'border-left': `4px solid #eee`,
+      'padding-left': `1rem`,
+    },
+    h3: {
+      'font-size': `1.3em`,
+      'font-weight': `500`,
+      'margin': `1.6rem 0 1rem`,
+      'color': `#555`,
+    },
+    h4: {
+      'font-size': `1.1em`,
+      'font-weight': `500`,
+      'margin': `1.4rem 0 0.8rem`,
+      'color': `#777`,
+    },
+    h5: {
+      'font-size': `1em`,
+      'font-weight': `500`,
+      'margin': `1.2rem 0 0.6rem`,
+      'color': `#999`,
+    },
+    h6: {
+      'font-size': `0.9em`,
+      'font-weight': `500`,
+      'margin': `1rem 0 0.4rem`,
+      'color': `#aaa`,
+    },
+
+    // 段落
+    p: {
+      'margin': `1em 0`,
+      'color': `#444`,
+      'font-size': `1rem`,
+      'letter-spacing': `0.01em`,
+    },
+
+    // 引用
+    blockquote: {
+      'border-left': `4px solid #e0e0e0`,
+      'padding': `1em 1.5em`,
+      'margin': `1.5em 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#555`,
+      'font-style': `normal`,
+      'border-radius': `0 4px 4px 0`,
+    },
+
+    blockquote_p: {
+      margin: `0.5em 0`,
+      color: `inherit`,
+    },
+
+    // 警告块
+    blockquote_note: {
+      'border-left-color': `#4285f4`,
+      'background': `#f0f7ff`,
+    },
+    blockquote_tip: {
+      'border-left-color': `#34a853`,
+      'background': `#f0fff4`,
+    },
+    blockquote_warning: {
+      'border-left-color': `#fbbc05`,
+      'background': `#fff9e6`,
+    },
+    blockquote_caution: {
+      'border-left-color': `#ea4335`,
+      'background': `#fff0f0`,
+    },
+
+    blockquote_title: {
+      'display': `flex`,
+      'align-items': `center`,
+      'gap': `0.5em`,
+      'font-weight': `600`,
+      'margin-bottom': `0.5em`,
+    },
+
+    // 代码块
+    code_pre: {
+      'background': `#f5f5f5`,
+      'border-radius': `6px`,
+      'padding': `1.2em`,
+      'overflow-x': `auto`,
+      'font-family': `"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace`,
+      'font-size': `0.9em`,
+      'line-height': `1.6`,
+      'margin': `1.5em 0`,
+      'border': `1px solid #eaeaea`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `#f5f5f5`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `3px`,
+      'font-family': `"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace`,
+      'font-size': `0.9em`,
+      'color': `#d14`,
+    },
+
+    // 图片
+    image: {
+      'display': `block`,
+      'max-width': `100%`,
+      'height': `auto`,
+      'margin': `1.5em auto`,
+      'border-radius': `4px`,
+      'box-shadow': `0 2px 8px rgba(0,0,0,0.1)`,
+    },
+
+    // 列表
+    ol: {
+      'padding-left': `1.5em`,
+      'margin': `1.5em 0`,
+      'color': `#444`,
+    },
+    ul: {
+      'padding-left': `1.5em`,
+      'margin': `1.5em 0`,
+      'color': `#444`,
+      'list-style-type': `square`,
+    },
+
+    // 表格
+    table: {
+      'border-collapse': `collapse`,
+      'width': `100%`,
+      'margin': `1.5em 0`,
+      'font-size': `0.95em`,
+      'box-shadow': `0 0 0 1px #e0e0e0`,
+      'border-radius': `4px`,
+      'overflow': `hidden`,
+    },
+    thead: {
+      'background': `#f5f5f5`,
+      'font-weight': `600`,
+    },
+    td: {
+      'padding': `0.75em 1em`,
+      'border': `1px solid #e0e0e0`,
+      'line-height': `1.5`,
+    },
+
+    // 分隔线
+    hr: {
+      border: `none`,
+      height: `1px`,
+      background: `#e0e0e0`,
+      margin: `2.5em 0`,
+    },
+
+    // 脚注
+    footnotes: {
+      'border-top': `1px solid #e0e0e0`,
+      'margin-top': `3em`,
+      'padding-top': `1em`,
+      'font-size': `0.85em`,
+      'color': `#666`,
+    },
+  },
+  inline: {
+    listitem: {
+      'margin': `0.5em 0`,
+      'line-height': `1.6`,
+    },
+
+    codespan: {
+      'background': `#f5f5f5`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `3px`,
+      'font-family': `"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace`,
+      'font-size': `0.9em`,
+      'color': `#d14`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#555`,
+    },
+
+    link: {
+      'color': `#0366d6`,
+      'text-decoration': `none`,
+      'border-bottom': `1px solid rgba(3,102,214,0.2)`,
+      '&:hover': {
+        'border-bottom-color': `currentColor`,
+      },
+    },
+
+    strong: {
+      'font-weight': `600`,
+      'color': `#222`,
+    },
+
+    footnote: {
+      'font-size': `12px`,
+      'color': `#666`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.8em`,
+    },
+  },
+}
+
+const letterTheme: Theme = {
+  base: {
+    '--md-primary-color': `#8B6B61`, // 主色调为复古棕色
+    '--blockquote-background': `#FFF9F0`,
+    'text-align': `left`,
+    'line-height': `1.8`,
+    'background': `#FFF9F0`, // 信纸底色
+    'font-family': `"Georgia", "Times New Roman", serif`,
+    'color': `#5D4037`, // 主要文字颜色
+  },
+  block: {
+    container: {
+      'background-image': `linear-gradient(to bottom, #FFF9F0 95%, #F0E6D2 100%)`,
+      'padding': `3rem 2.5rem`,
+      'border': `1px solid #E0D6C3`,
+      'max-width': `700px`,
+      'margin': `2rem auto`,
+      'box-shadow': `0 0 15px rgba(0,0,0,0.05)`,
+    },
+
+    // 标题（已优化视觉层次）
+    h1: {
+      'font-size': `1.8em`,
+      'font-weight': `normal`,
+      'margin': `2.5rem 0 1.8rem`,
+      'color': `#5D4037`,
+      'border-bottom': `1px dashed #D7CCC8`,
+      'font-style': `italic`,
+      'text-align': `center`,
+      'letter-spacing': `0.05em`,
+    },
+    h2: {
+      'font-size': `1.5em`,
+      'font-weight': `normal`,
+      'margin': `2.2rem 0 1.5rem`,
+      'color': `#6D4C41`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `#D7CCC8`,
+      'text-decoration-thickness': `1px`,
+      'text-underline-offset': `0.3em`,
+    },
+    h3: {
+      'font-size': `1.3em`,
+      'font-weight': `normal`,
+      'margin': `2rem 0 1.3rem`,
+      'color': `#8D6E63`,
+      'letter-spacing': `0.05em`,
+      'border-left': `3px solid #D7CCC8`,
+      'padding-left': `0.8em`,
+    },
+    h4: {
+      'font-size': `1.1em`,
+      'font-weight': `normal`,
+      'margin': `1.8rem 0 1.1rem`,
+      'color': `#A1887F`,
+      'font-variant': `small-caps`,
+    },
+    h5: {
+      'font-size': `1em`,
+      'font-style': `italic`,
+      'margin': `1.6rem 0 1rem`,
+      'color': `#BCAAA4`,
+    },
+    h6: {
+      'font-size': `0.9em`,
+      'font-style': `italic`,
+      'margin': `1.4rem 0 0.9rem`,
+      'color': `#D7CCC8`,
+      'text-decoration': `underline dotted`,
+    },
+
+    // 段落
+    p: {
+      'margin': `1.2em 0`,
+      'color': `#5D4037`,
+      'font-size': `1.05rem`,
+      'text-align': `justify`,
+      'text-justify': `inter-character`,
+      'hyphens': `auto`,
+    },
+
+    // 引用块
+    blockquote: {
+      'border-left': `3px solid #D7CCC8`,
+      'padding': `1.2em 1.8em`,
+      'margin': `1.8em 0`,
+      'background': `var(--blockquote-background)`,
+      'color': `#6D4C41`,
+      'font-style': `normal`,
+      'position': `relative`,
+    },
+
+    blockquote_p: {
+      'margin': `0.8em 0`,
+      'color': `inherit`,
+      'text-indent': `1em`,
+    },
+
+    // 警告块（调整为复古风格）
+    blockquote_note: {
+      'border-left-color': `#7C9EB2`,
+      'background': `#F0F7F9`,
+    },
+    blockquote_tip: {
+      'border-left-color': `#8BA88E`,
+      'background': `#F2F7F0`,
+    },
+    blockquote_warning: {
+      'border-left-color': `#D4A373`,
+      'background': `#FBF3EC`,
+    },
+    blockquote_caution: {
+      'border-left-color': `#C88D8D`,
+      'background': `#FBEFEF`,
+    },
+
+    blockquote_title: {
+      'display': `flex`,
+      'align-items': `center`,
+      'gap': `0.5em`,
+      'font-weight': `600`,
+      'margin-bottom': `0.8em`,
+      'font-variant': `small-caps`,
+      'letter-spacing': `0.1em`,
+    },
+
+    // 代码块（调整为复古打字机风格）
+    code_pre: {
+      'background': `#F5F0E6`,
+      'border-radius': `3px`,
+      'padding': `1.2em 1.5em`,
+      'overflow-x': `auto`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.95em`,
+      'line-height': `1.5`,
+      'margin': `1.8em 0`,
+      'border': `1px solid #E0D6C3`,
+      'box-shadow': `inset 0 0 3px rgba(0,0,0,0.1)`,
+      'color': `#5D4037`,
+    },
+
+    // 行内代码
+    code: {
+      'background': `#F5F0E6`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `2px`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.9em`,
+      'color': `#8B6B61`,
+      'border': `1px solid #E0D6C3`,
+    },
+
+    // 图片（添加信纸质感边框）
+    image: {
+      'display': `block`,
+      'max-width': `90%`,
+      'height': `auto`,
+      'margin': `2em auto`,
+      'border': `1px solid #E0D6C3`,
+      'padding': `8px`,
+      'background': `white`,
+      'box-shadow': `0 2px 8px rgba(0,0,0,0.05)`,
+      'position': `relative`,
+    },
+
+    // 列表（使用复古项目符号）
+    ol: {
+      'padding-left': `1.8em`,
+      'margin': `1.8em 0`,
+      'color': `#5D4037`,
+      'list-style-type': `decimal`,
+    },
+    ul: {
+      'padding-left': `1.8em`,
+      'margin': `1.8em 0`,
+      'color': `#5D4037`,
+      'list-style-type': `disc`,
+    },
+
+    // 表格（信纸风格）
+    table: {
+      'border-collapse': `separate`,
+      'width': `100%`,
+      'margin': `2em 0`,
+      'font-size': `0.95em`,
+      'border-spacing': `0`,
+      'border': `1px solid #E0D6C3`,
+      'border-radius': `4px`,
+      'overflow': `hidden`,
+      'box-shadow': `0 1px 3px rgba(0,0,0,0.05)`,
+    },
+    thead: {
+      'background': `#F5F0E6`,
+      'font-weight': `600`,
+      'border-bottom': `1px solid #E0D6C3`,
+    },
+    td: {
+      'padding': `0.8em 1.2em`,
+      'border-bottom': `1px solid #E0D6C3`,
+      'border-right': `1px solid #E0D6C3`,
+    },
+
+    // 分隔线（手绘风格）
+    hr: {
+      border: `none`,
+      height: `1px`,
+      background: `linear-gradient(to right, transparent 0%, #D7CCC8 50%, transparent 100%)`,
+      margin: `3em 0`,
+      position: `relative`,
+    },
+
+    // 脚注（信纸底部风格）
+    footnotes: {
+      'border-top': `1px dashed #D7CCC8`,
+      'margin-top': `3.5em`,
+      'padding-top': `1.5em`,
+      'font-size': `0.85em`,
+      'color': `#8D6E63`,
+    },
+  },
+  inline: {
+    listitem: {
+      'margin': `0.6em 0`,
+      'line-height': `1.7`,
+      'text-indent': `-0.5em`,
+    },
+
+    codespan: {
+      'background': `#F5F0E6`,
+      'padding': `0.2em 0.4em`,
+      'border-radius': `2px`,
+      'font-family': `"Courier New", Courier, monospace`,
+      'font-size': `0.9em`,
+      'color': `#8B6B61`,
+      'border': `1px solid #E0D6C3`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'color': `#6D4C41`,
+    },
+
+    link: {
+      'color': `#7C9EB2`,
+      'text-decoration': `underline`,
+      'text-decoration-color': `#D7CCC8`,
+      'text-underline-offset': `0.2em`,
+    },
+
+    strong: {
+      'font-weight': `600`,
+      'color': `#5D4037`,
+      'letter-spacing': `0.02em`,
+    },
+
+    footnote: {
+      'font-size': `0.85em`,
+      'color': `#8D6E63`,
+      'vertical-align': `super`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'font-size': `0.9em`,
+      'color': `#A1887F`,
+      'margin-top': `0.8em`,
+      'font-style': `italic`,
+    },
+  },
+}
 
 // 暗黑主题示例
 const phycatDark = toMerged(defaultTheme, {
@@ -934,7 +1298,8 @@ const phycatRed = toMerged(defaultTheme, {
 export const themeColorMap = {
   default: `#0F4C81`, // 经典蓝
   grace: `#92617E`, // 薰衣紫
-  simple: `#333333`, // 石墨黑
+  minimal: `#333333`, // 石墨黑
+  letter: `#5D4037`, // 信纸黑
   phycatDark: `#546f99`, // 暗蓝色
   phycatGreen: `#11aa63`, // 绿色
   phycatMint: `#1FA2FF`, // 薄荷色
@@ -959,9 +1324,14 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
     desc: `@brzhang`,
   },
   {
-    label: `黑白极简`,
-    value: `simple`,
-    desc: `@okooo5km`,
+    label: `极简风格`,
+    value: `minimal`,
+    desc: `@linxi9948`,
+  },
+  {
+    label: `信纸风格`,
+    value: `letter`,
+    desc: `@linxi9948`,
   },
   {
     label: `暗黑江湖`,
@@ -1010,7 +1380,8 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
 export const themeMap = {
   default: defaultTheme,
   grace: graceTheme,
-  simple: simpleTheme,
+  minimal: minimalTheme,
+  letter: letterTheme,
   phycatDark,
   phycatGreen,
   phycatMint,
