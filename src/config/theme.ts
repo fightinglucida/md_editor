@@ -1786,6 +1786,8 @@ const literaryTheme: Theme = {
     //   padding: `0.8rem 1.2rem`,
     //   border: `1px solid #D4C8B8`,
     // },
+    figure: {},
+    blockquote_title: {},
     blockquote_note: {},
     blockquote_tip: {},
     blockquote_important: {},
@@ -2006,21 +2008,21 @@ const newsTheme: Theme = {
     },
 
     // 表格（数据表格样式）
-    table: {
-      'border-collapse': `collapse`,
-      'width': `100%`,
-      'margin': `1.5rem 0`,
-      'font-size': `0.95em`,
-      'border': `1px solid #E0E0E0`,
-    },
-    thead: {
-      'background': `#F5F5F5`,
-      'font-weight': `600`,
-    },
-    td: {
-      padding: `0.8rem 1rem`,
-      border: `1px solid #E0E0E0`,
-    },
+    // table: {
+    //   'border-collapse': `collapse`,
+    //   'width': `100%`,
+    //   'margin': `1.5rem 0`,
+    //   'font-size': `0.95em`,
+    //   'border': `1px solid #E0E0E0`,
+    // },
+    // thead: {
+    //   'background': `#F5F5F5`,
+    //   'font-weight': `600`,
+    // },
+    // td: {
+    //   padding: `0.8rem 1rem`,
+    //   border: `1px solid #E0E0E0`,
+    // },
 
     // 分隔线（报刊分隔线）
     hr: {
