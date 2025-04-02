@@ -2909,6 +2909,7 @@ const readingTheme: Theme = {
     'font-family': `"Noto Serif SC", "Source Han Serif", "SimSun", serif`, // 优先使用思源宋体
   },
   block: {
+    figure: {},
     container: {
       'padding': `2rem`,
       'max-width': `680px`, // 适合阅读的宽度
@@ -2986,6 +2987,7 @@ const readingTheme: Theme = {
       margin: `0.8em 0`,
       color: `inherit`,
     },
+    blockquote_title: {},
     blockquote_important: {},
     blockquote_title_note: {},
     blockquote_title_tip: {},
