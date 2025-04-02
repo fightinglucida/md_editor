@@ -2306,6 +2306,7 @@ const pinkTheme: Theme = {
     },
   },
   inline: {
+    wx_link: defaultTheme.inline.wx_link,
     // 表格（柔和边框）
     table: {
       'border-collapse': `separate`,
@@ -2484,6 +2485,26 @@ const luxuryTheme: Theme = {
       'margin-bottom': `1em`,
       'color': `#D4AF37`,
     },
+    blockquote_important: {
+      'border-left-color': `#E5534B`,
+      'background': `rgba(229, 83, 75, 0.08)`,
+    },
+    blockquote_title_note: {
+      'border-left-color': `#5D8BF4`,
+      'background': `rgba(93, 139, 244, 0.08)`,
+    },
+    blockquote_title_tip: {
+      'border-left-color': `#57C785`,
+      'background': `rgba(87, 199, 133, 0.08)`,
+    },
+    blockquote_title_warning: {
+      'border-left-color': `#F4B740`,
+      'background': `rgba(244, 183, 64, 0.08)`,
+    },
+    blockquote_title_caution: {
+      'border-left-color': `#E5534B`,
+      'background': `rgba(229, 83, 75, 0.08)`,
+    },
 
     // 代码块（黑金终端）
     code_pre: {
@@ -2553,6 +2574,7 @@ const luxuryTheme: Theme = {
     },
   },
   inline: {
+    wx_link: defaultTheme.inline.wx_link,
     // 表格（高级数据表）
     table: {
       'border-collapse': `collapse`,
@@ -2783,6 +2805,26 @@ const kidsTheme: Theme = {
       'list-style-type': `none`,
     },
 
+    // 分隔线（彩虹虚线）
+    hr: {
+      'border': `none`,
+      'height': `4px`,
+      'background': `repeating-linear-gradient(to right, #5E9DD9, #4CAF50, #FFC107, #FF5722, #9C27B0, #5E9DD9)`,
+      'margin': `3rem 0`,
+      'background-size': `200% 100%`,
+    },
+
+    // 脚注（友好提示）
+    footnotes: {
+      'border-top': `2px dotted #5E9DD9`,
+      'margin-top': `3rem`,
+      'padding-top': `1.5rem`,
+      'font-size': `0.9em`,
+      'color': `#666666`,
+    },
+  },
+  inline: {
+    wx_link: defaultTheme.inline.wx_link,
     // 表格（乐高风格）
     table: {
       'border-collapse': `separate`,
@@ -2803,26 +2845,6 @@ const kidsTheme: Theme = {
       'border-bottom': `2px solid #E3F2FD`,
       'background': `#FFFFFF`,
     },
-
-    // 分隔线（彩虹虚线）
-    hr: {
-      'border': `none`,
-      'height': `4px`,
-      'background': `repeating-linear-gradient(to right, #5E9DD9, #4CAF50, #FFC107, #FF5722, #9C27B0, #5E9DD9)`,
-      'margin': `3rem 0`,
-      'background-size': `200% 100%`,
-    },
-
-    // 脚注（友好提示）
-    footnotes: {
-      'border-top': `2px dotted #5E9DD9`,
-      'margin-top': `3rem`,
-      'padding-top': `1.5rem`,
-      'font-size': `0.9em`,
-      'color': `#666666`,
-    },
-  },
-  inline: {
     listitem: {
       'margin': `0.8em 0`,
       'line-height': `1.8`,
@@ -2940,7 +2962,7 @@ const readingTheme: Theme = {
       'color': `#333333`,
       'font-size': `1.05rem`,
       'text-align': `justify`,
-      'text-justify': `inter-ideograph`,
+      'text-justify': `inter-character`,
       'hyphens': `auto`,
       'letter-spacing': `0.02em`,
     },
@@ -3007,23 +3029,6 @@ const readingTheme: Theme = {
       'color': `#333333`,
     },
 
-    // 表格（数据清晰呈现）
-    table: {
-      'border-collapse': `collapse`,
-      'width': `100%`,
-      'margin': `2rem 0`,
-      'font-size': `0.95em`,
-      'border': `1px solid #E0E0E0`,
-    },
-    thead: {
-      'background': `#F5F7F9`,
-      'font-weight': `600`,
-    },
-    td: {
-      padding: `0.8rem 1rem`,
-      border: `1px solid #E0E0E0`,
-    },
-
     // 分隔线（非干扰式）
     hr: {
       border: `none`,
@@ -3042,6 +3047,23 @@ const readingTheme: Theme = {
     },
   },
   inline: {
+    wx_link: defaultTheme.inline.wx_link,
+    // 表格（数据清晰呈现）
+    table: {
+      'border-collapse': `collapse`,
+      'width': `100%`,
+      'margin': `2rem 0`,
+      'font-size': `0.95em`,
+      'border': `1px solid #E0E0E0`,
+    },
+    thead: {
+      'background': `#F5F7F9`,
+      'font-weight': `600`,
+    },
+    td: {
+      padding: `0.8rem 1rem`,
+      border: `1px solid #E0E0E0`,
+    },
     listitem: {
       'margin': `0.6em 0`,
       'line-height': `1.8`,
