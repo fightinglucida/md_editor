@@ -16,7 +16,7 @@ function onUpdate(val: boolean) {
 
 const links = [
   { label: `公众号批量采集工具`, url: `https://hiuinilx1w.feishu.cn/docx/IilldFTYLot3nPxsZmBcA9jTnmf?from=from_copylink` },
-  { label: `公众号对标库`, url: `https://www.weixinwriter.com/benchmark` },
+  { label: `公众号导航站`, url: `https://www.weixinwriter.com` },
 ]
 
 function onRedirect(url: string) {
